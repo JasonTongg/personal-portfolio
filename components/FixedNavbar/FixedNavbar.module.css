@@ -10,6 +10,8 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
+  z-index: 100;
+  border: 1px solid #7e7e7e;
 }
 
 .container > * {

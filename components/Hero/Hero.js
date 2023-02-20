@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import Image from 'next/image';
-import Profile from '../../public/Assets/Profile.png';
 import Wave from '../../public/Assets/wave.png';
 import {BsInstagram} from 'react-icons/bs';
 import {RiLinkedinFill} from 'react-icons/ri';
 import {FiGithub} from 'react-icons/fi';
 import {IoPaperPlaneOutline} from 'react-icons/io5';
 import Link from 'next/link';
+import {TypeAnimation} from 'react-type-animation';
 
 export default function Hero() {
   return (
@@ -34,7 +34,19 @@ export default function Hero() {
           </div>
           <div className={styles.contentHeader}>
             <div className={styles.line}></div>
-            <h2>Front-end Developer</h2>
+            <TypeAnimation
+              sequence={[
+                'Front-end Developer',
+                1000,
+                'Web Developer',
+                1000,
+                'Tech Enthusiast',
+                1000,
+              ]}
+              speed={50}
+              wrapper="h2"
+              repeat={Infinity}
+            />
           </div>
           <p>
             I{"'"}m active Binus University student in Jakarta. I{"'"}m very

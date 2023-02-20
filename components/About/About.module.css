@@ -1,10 +1,12 @@
 .container {
   display: flex;
-  width: 100%;
+  width: 70%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-inline: auto;
+  padding: 2rem;
 }
 
 .header {
@@ -22,5 +24,90 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: 4rem;
+  width: 100%;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contentContainer > p {
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.contentItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
+}
+
+.contentItem h3 {
+  font-size: 1.2rem;
+}
+
+.contentItem svg {
+  font-size: 3rem;
+}
+
+.image img {
+  width: 333px;
+  height: 333px;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 10;
+  position: relative;
+  transform: rotate(10deg);
+}
+
+.image {
+  position: relative;
+}
+
+.image div {
+  width: 333px;
+  height: 333px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: black;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button p,
+.button svg {
+  color: white;
+}
+
+.button svg {
+  font-size: 1.3rem;
 }

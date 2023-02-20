@@ -1,9 +1,11 @@
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 5rem 4rem;
-  gap: 8rem;
+  padding: 5rem 0;
+  gap: 5rem;
   align-items: center;
+  width: 70%;
+  margin-inline: auto;
 }
 
 .sosmed {
@@ -46,7 +48,7 @@
 }
 
 .contentHeader h1 {
-  font-size: 100px;
+  font-size: 80px;
 }
 .contentHeader h2 {
   font-size: 30px;
@@ -90,6 +92,10 @@
 .button p,
 .button svg {
   color: white;
+}
+
+.button svg {
+  font-size: 1.3rem;
 }
 
 .imageProfile {
