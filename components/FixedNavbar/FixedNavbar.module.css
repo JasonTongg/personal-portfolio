@@ -3,7 +3,6 @@
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #bcbcbc;
   padding: 0 28px;
   border-radius: 12px;
   display: flex;
@@ -11,12 +10,14 @@
   justify-content: center;
   gap: 40px;
   z-index: 100;
-  border: 1px solid #7e7e7e;
+  background-color: rgb(125, 125, 125, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .container > * {
   font-size: 25px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   margin-block: 19px;
 }

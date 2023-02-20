@@ -10,7 +10,7 @@ export default function index() {
       <Navbar />
       <Hero />
       <About />
-      {/* <FixedNavbar /> */}
+      <FixedNavbar />
     </div>
   );
 }
