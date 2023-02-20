@@ -1,0 +1,29 @@
+.container {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #bcbcbc;
+  padding: 0 28px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.container > * {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  margin-block: 19px;
+}
+
+.container svg.active {
+  color: white;
+  background-color: black;
+  border-radius: 100px;
+  margin-block: 16px;
+  font-size: 2rem;
+  padding: 4px;
+}
