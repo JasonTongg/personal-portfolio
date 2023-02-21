@@ -25,4 +25,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
+  gap: 1rem;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--gray);
 }

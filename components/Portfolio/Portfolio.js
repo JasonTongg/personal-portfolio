@@ -45,7 +45,7 @@ let data = [
   },
   {
     title: 'Binar Rental Car',
-    demo: 'Demo Link',
+    // demo: 'Demo Link',
     github: 'github link',
     image: 'image link / path',
     desc: 'desc',
@@ -65,6 +65,7 @@ export default function Portfolio() {
           <Card key={idx} data={item}></Card>
         ))}
       </div>
+      <button className={styles.button}>Show More...</button>
     </div>
   );
 }
