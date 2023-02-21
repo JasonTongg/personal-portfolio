@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header h2 {
+  font-size: 40px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.button svg {
+  font-size: 1.4rem;
+}
+.container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header h2 {
+  font-size: 40px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.button svg {
+  font-size: 1.4rem;
+}
+
+.content {
+  height: auto;
+  overflow: hidden;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  background-color: gray;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contentItems {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  width: 100%;
+  column-gap: 3rem;
+  transition: visibility 0.5s, opacity 0.5s, transform 1s;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+.contentItemsLeft {
+  text-align: right;
+}
+
+.contentItemsActive {
+  margin-top: 5rem;
+}
+
+.contentItem {
+  height: 80px;
+}
+
+.contentItems .contentItem .date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.contentItems .contentItem .dateLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}

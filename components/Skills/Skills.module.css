@@ -1,0 +1,112 @@
+.container {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header h2 {
+  font-size: 40px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.button svg {
+  font-size: 1.4rem;
+}
+
+.content,
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
+  padding: 2rem;
+  width: 60%;
+  border-radius: 30px;
+  transition: visibility 0.5s, opacity 0.5s, transform 1s;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+.content h2,
+.contents h2 {
+  margin-bottom: 1rem;
+}
+
+.skillContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  column-gap: 2rem;
+}
+
+.skill {
+  display: grid;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+}
+
+.skill svg {
+  margin-top: 4px;
+  font-size: 1.8rem;
+}
+
+.skillInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.skillInfo p {
+  font-size: 0.8rem;
+  color: var(--gray-3);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
