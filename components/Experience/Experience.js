@@ -73,8 +73,8 @@ export default function Experience() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2>Skills</h2>
-        <p>My Technical Level</p>
+        <h2>Experience</h2>
+        <p>My Personal Journey</p>
       </div>
       <div className={styles.buttons}>
         <div
