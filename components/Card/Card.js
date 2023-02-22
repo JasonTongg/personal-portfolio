@@ -3,28 +3,45 @@ import styles from './Card.module.css';
 import tempPhoto from '../../public/Assets/temp-photo.png';
 import Image from 'next/image';
 import {BsArrowRightShort} from 'react-icons/bs';
+import Link from 'next/link';
 
 export default function Card({data}) {
   return (
     <div className={styles.container}>
       <Image
-        src={tempPhoto}
+        src={data.image || tempPhoto}
         alt="Portfolio photo"
         width={200}
         height={200}
+        quality={100}
       ></Image>
       <h3>{data.title}</h3>
       <div className={styles.buttons}>
         {data.demo && (
-          <div className={styles.button}>
+          <Link href={data.demo} className={styles.button} target="_blank">
             <p>Demo</p>
             <BsArrowRightShort></BsArrowRightShort>
-          </div>
+          </Link>
         )}
-        <div className={styles.button}>
-          <p>GitHub</p>
-          <BsArrowRightShort></BsArrowRightShort>
-        </div>
+        {typeof data.github === 'string' && (
+          <Link href={data.github} className={styles.button} target="_blank">
+            <p>GitHub</p>
+            <BsArrowRightShort></BsArrowRightShort>
+          </Link>
+        )}
+        {typeof data.github !== 'string' && (
+          <Link href={data.github[0]} className={styles.button} target="_blank">
+            <p>GitHub</p>
+            <BsArrowRightShort></BsArrowRightShort>
+          </Link>
+        )}
+        {typeof data.github !== 'string' && (
+          <Link href={data.github[1]} className={styles.button} target="_blank">
+            <p>GitHub</p>
+            <BsArrowRightShort></BsArrowRightShort>
+          </Link>
+        )}
+
         <div className={styles.button}>
           <p>Details</p>
           <BsArrowRightShort></BsArrowRightShort>
