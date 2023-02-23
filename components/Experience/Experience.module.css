@@ -35,11 +35,19 @@
   gap: 0.5rem;
   font-size: 1.3rem;
   cursor: pointer;
+  color: var(--gray-2);
 }
 
 .button svg {
   font-size: 1.4rem;
+  color: var(--gray-2);
 }
+
+.active,
+.active svg {
+  color: black;
+}
+
 .container {
   display: flex;
   width: 70%;

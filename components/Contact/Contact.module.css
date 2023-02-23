@@ -23,9 +23,24 @@
 
 .contentContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   gap: 1rem;
+}
+
+.contentItem {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  max-width: 350px;
 }
 
 .button {
@@ -42,5 +57,5 @@
 }
 
 .button svg {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }

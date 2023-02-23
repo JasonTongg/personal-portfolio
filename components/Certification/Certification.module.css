@@ -21,6 +21,29 @@
   font-size: 40px;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 1.5rem;
+}
+
+.buttons button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--gray-2);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.buttons .active {
+  color: white;
+  padding: 0.3rem 0.8rem;
+  background-color: #454545;
+  border-radius: 5px;
+}
+
 .contentContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
