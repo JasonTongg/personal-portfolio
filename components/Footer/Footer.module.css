@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--white);
+  margin-top: 4rem;
+  box-shadow: 4px -8px 24px var(--boxShadow);
+}
+
+.container > * {
+  padding: 0;
+  margin: 0;
+}
+
+.container h2 {
+  font-size: 35px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.sosmed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.sosmed svg {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.navbar li {
+  font-size: 20px;
+}
+
+.container p {
+  font-size: 1.2rem;
+}
+
+.container p span {
+  font-weight: bold;
+}

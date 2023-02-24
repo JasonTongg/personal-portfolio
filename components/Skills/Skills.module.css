@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  color: var(--black);
 }
 
 .header h2 {
@@ -26,6 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  color: var(--black);
 }
 
 .button {
@@ -47,14 +49,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
+  background-color: var(--white);
+  box-shadow: 4px 8px 24px var(--boxShadow);
   padding: 2rem;
   width: 60%;
   border-radius: 30px;
   transition: visibility 0.5s, opacity 0.5s, transform 1s;
   animation-name: show;
   animation-duration: 1s;
+  color: var(--black);
   animation-timing-function: linear;
   visibility: hidden;
   animation-fill-mode: forwards;

@@ -8,7 +8,7 @@ import {education, exp, organization} from '../../Data/Experience';
 export default function Experience() {
   let [experience, setExperience] = useState(education);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="experience">
       <div className={styles.header}>
         <h2>Experience</h2>
         <p>My Personal Journey</p>

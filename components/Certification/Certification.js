@@ -1,4 +1,4 @@
-import React, {use, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './Certification.module.css';
 import CertifCard from '../CertifCard/CertifCard';
 import data from '../../Data/Certification';

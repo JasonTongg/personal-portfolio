@@ -7,7 +7,7 @@ import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 export default function Portfolio() {
   let [limit, setLimit] = useState(6);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="portfolio">
       <div className={styles.header}>
         <h2>Portfolio</h2>
         <p>Most Recent Work</p>

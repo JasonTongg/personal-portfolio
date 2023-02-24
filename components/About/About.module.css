@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  color: var(--black);
 }
 
 .header h2 {
@@ -39,6 +40,7 @@
 .contentContainer > p {
   text-align: justify;
   margin-top: 1rem;
+  color: var(--black);
 }
 
 .contentItems {
@@ -56,15 +58,19 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 2rem 2.5rem;
-  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
+  box-shadow: 4px 8px 24px var(--boxShadow);
+  border-radius: 30px;
+  color: var(--black);
 }
 
 .contentItem h3 {
   font-size: 1.2rem;
+  color: var(--black);
 }
 
 .contentItem svg {
   font-size: 3rem;
+  color: var(--black);
 }
 
 .image img {
@@ -85,7 +91,7 @@
   width: 333px;
   height: 333px;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--black-03);
   position: absolute;
   top: 0;
   left: 0;
@@ -97,17 +103,29 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: black;
+  background-color: var(--black);
   padding: 0.7rem 2rem;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.4s;
+  border: 1px solid var(--black);
 }
 
 .button p,
 .button svg {
-  color: white;
+  color: var(--white);
+  transition: all 0.4s;
 }
 
 .button svg {
   font-size: 1.3rem;
+}
+
+.button:hover p,
+.button:hover svg {
+  color: var(--black);
+}
+
+.button:hover {
+  background-color: transparent;
 }

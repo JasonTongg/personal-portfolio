@@ -93,7 +93,7 @@ export default function Skills() {
   let [skill, setSkill] = useState(true);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="skills">
       <div className={styles.header}>
         <h2>Skills</h2>
         <p>My Technical Level</p>

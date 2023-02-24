@@ -4,10 +4,12 @@ import Profile from '../../public/Assets/Profile.png';
 import Image from 'next/image';
 import {RiMedalLine} from 'react-icons/ri';
 import {FiDownloadCloud} from 'react-icons/fi';
+import {GiSpellBook} from 'react-icons/gi';
+import {AiOutlineFileDone} from 'react-icons/ai';
 
 export default function About() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <div className={styles.header}>
         <h2>About Me</h2>
         <p>My Introduction</p>
@@ -27,17 +29,17 @@ export default function About() {
             <div className={styles.contentItem}>
               <RiMedalLine></RiMedalLine>
               <h3>Experience</h3>
-              <p>2 + Year</p>
+              <p>1 + Year</p>
             </div>
             <div className={styles.contentItem}>
-              <RiMedalLine></RiMedalLine>
-              <h3>Experience</h3>
-              <p>2 + Year</p>
+              <GiSpellBook></GiSpellBook>
+              <h3>Learning</h3>
+              <p>3 + Years</p>
             </div>
             <div className={styles.contentItem}>
-              <RiMedalLine></RiMedalLine>
-              <h3>Experience</h3>
-              <p>2 + Year</p>
+              <AiOutlineFileDone></AiOutlineFileDone>
+              <h3>Completed</h3>
+              <p>15 + Projects</p>
             </div>
           </div>
           <p>

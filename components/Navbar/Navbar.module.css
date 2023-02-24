@@ -11,6 +11,7 @@
 .navbarHeader {
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--black);
 }
 
 .navbarItem {
@@ -23,4 +24,9 @@
 
 .navbarItem > * {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: var(--black);
 }

@@ -10,23 +10,41 @@
   justify-content: center;
   gap: 40px;
   z-index: 100;
-  background-color: rgb(125, 125, 125, 0.1);
+  background-color: var(--125-01);
   backdrop-filter: blur(5px);
-  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 8px 24px var(--black-03);
+  transition: all 0.3s;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .container > * {
   font-size: 25px;
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--black-08);
   cursor: pointer;
   margin-block: 19px;
 }
 
 .container svg.active {
-  color: white;
-  background-color: black;
+  color: var(--white);
+  background-color: var(--black);
   border-radius: 100px;
   margin-block: 16px;
   font-size: 2rem;
   padding: 4px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px), translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px), translateX(-50%);
+  }
 }

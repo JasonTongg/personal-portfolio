@@ -22,4 +22,11 @@ a {
   --gray: #6a6a6a;
   --gray-2: #626262;
   --gray-3: #646464;
+  --gray-45: #454545;
+  --pgray: gray;
+  --black: black;
+  --boxShadow: rgba(74, 58, 255, 0.1);
+  --black-03: rgba(0, 0, 0, 0.3);
+  --black-08: rgba(0, 0, 0, 0.8);
+  --125-01: rgb(125, 125, 125, 0.1);
 }

@@ -6,9 +6,9 @@ import {CiLinkedin} from 'react-icons/ci';
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <div className={styles.header}>
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <p>Get in Touch</p>
       </div>
       <div className={styles.contentContainer}>

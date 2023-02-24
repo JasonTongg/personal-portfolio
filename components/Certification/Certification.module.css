@@ -38,9 +38,9 @@
 }
 
 .buttons .active {
-  color: white;
+  color: var(--white);
   padding: 0.3rem 0.8rem;
-  background-color: #454545;
+  background-color: var(--gray-45);
   border-radius: 5px;
 }
 
@@ -49,6 +49,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   gap: 1rem;
+  justify-content: center;
+  justify-items: center;
 }
 
 .button {

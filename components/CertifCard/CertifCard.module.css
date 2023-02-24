@@ -3,14 +3,22 @@
   text-align: center;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 4px 8px 24px rgba(74, 58, 255, 0.1);
-  background-color: white;
+  box-shadow: 4px 8px 24px var(--boxShadow);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
   max-width: 350px;
+}
+
+.showAnimation {
+  transition: all 0.3s;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .container img {
@@ -37,6 +45,24 @@
   cursor: pointer;
 }
 
+.button:hover svg {
+  transform: translateX(10px);
+}
+
 .button svg {
   font-size: 1.5rem;
+  transition: All 0.5s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
 }
