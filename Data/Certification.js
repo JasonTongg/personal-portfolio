@@ -10,7 +10,7 @@ let data = [
   {
     company: 'Udemy',
     title: 'Next.js & React - The Complete Guide',
-    image: '',
+    image: '../../public/Assets/udemy.png',
     credentials:
       'https://www.udemy.com/certificate/UC-01cdd19e-e1ab-4786-9846-991e7d9ad5c7/',
     type: ['Framework'],

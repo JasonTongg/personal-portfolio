@@ -4,19 +4,32 @@ import tempPhoto from '../../public/Assets/temp-photo.png';
 import Image from 'next/image';
 import {BsArrowRightShort} from 'react-icons/bs';
 import Link from 'next/link';
+import Udemy from '../../public/Assets/udemy.png';
+import FreeCodeCamp from '../../public/Assets/FreeCodeCamp.png';
+import Binar from '../../public/Assets/Binar.png';
 
 export default function CertifCard({data}) {
+  let image;
+  if (data.company === 'Udemy') {
+    image = Udemy;
+  } else if (data.company === 'FreeCodeCamp') {
+    image = FreeCodeCamp;
+  } else if (data.company === 'Binar Academy') {
+    image = Binar;
+  } else {
+    image = tempPhoto;
+  }
   return (
     <div className={`${styles.container} ${styles.showAnimation}`}>
       <Image
-        src={data.image || tempPhoto}
+        src={image}
         alt="Certificate photo"
         width={200}
         height={200}
         quality={100}
+        style={{marginTop: '.5rem'}}
       ></Image>
-      <p style={{marginTop: '.5rem'}}>{data.company}</p>
-      <h3>{data.title}</h3>
+      <p>{data.title}</p>
       <div className={styles.buttons}>
         {data.credentials && (
           <Link
