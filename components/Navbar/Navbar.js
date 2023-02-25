@@ -1,33 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Navbar.module.css';
-import {BsMoon} from 'react-icons/bs';
-//document.body.style.setProperty('--white', 'red');
-// --background-white: #ebebeb;
-//   --white: white;
-//   --gray: #6a6a6a;
-//   --gray-2: #626262;
-//   --gray-3: #646464;
-//   --gray-45: #454545;
-//   --pgray: gray;
-//   --black: black;
-//   --boxShadow: rgba(74, 58, 255, 0.1);
-//   --black-03: rgba(0, 0, 0, 0.3);
-//   --black-08: rgba(0, 0, 0, 0.8);
-//   --125-01: rgb(125, 125, 125, 0.1);
+import {BsMoon, BsSun} from 'react-icons/bs';
 
 export default function Navbar() {
+  let [theme, setTheme] = useState(false);
   let changeTheme = () => {
-    document.body.style.setProperty('--white', '#1b1b30');
-    document.body.style.setProperty('--background-white', '#131321');
-    document.body.style.setProperty('--black', '#ebebeb');
-    document.body.style.setProperty('--gray', '#b8b8b8');
-    document.body.style.setProperty('--gray-2', '#b8b8b8');
-    document.body.style.setProperty('--gray-3', '#b8b8b8');
-    document.body.style.setProperty('--boxShadow', 'rgba(255,255,255,.1');
-    document.body.style.setProperty('--black-03', 'rgba(255,255,255,.7');
-    // document.body.style.setProperty('--white', 'black');
-    // document.body.style.setProperty('--white', 'black');
-    // document.body.style.setProperty('--white', 'black');
+    setTheme(!theme);
+    // if (theme === true) {
+    //   document.body.style.setProperty('--white', '#1b1b30');
+    //   document.body.style.setProperty('--background-white', '#131321');
+    //   document.body.style.setProperty('--black', '#ebebeb');
+    //   document.body.style.setProperty('--gray', '#b8b8b8');
+    //   document.body.style.setProperty('--gray-2', '#b8b8b8');
+    //   document.body.style.setProperty('--gray-3', '#b8b8b8');
+    //   document.body.style.setProperty('--boxShadow', 'rgba(255,255,255,.1');
+    //   document.body.style.setProperty('--black-03', 'rgba(255,255,255,.7');
+    //   // document.body.style.setProperty('--white', 'black');
+    //   // document.body.style.setProperty('--white', 'black');
+    //   // document.body.style.setProperty('--white', 'black');
+    // } else {
+    //   // --background-white: #ebebeb;
+    //   //   --white: white;
+    //   //   --gray: #6a6a6a;
+    //   //   --gray-2: #626262;
+    //   //   --gray-3: #646464;
+    //   //   --gray-45: #454545;
+    //   //   --pgray: gray;
+    //   //   --black: black;
+    //   //   --boxShadow: rgba(74, 58, 255, 0.1);
+    //   //   --black-03: rgba(0, 0, 0, 0.3);
+    //   //   --black-08: rgba(0, 0, 0, 0.8);
+    //   //   --125-01: rgb(125, 125, 125, 0.1);
+    //   document.body.style.setProperty('--white', '#1b1b30');
+    //   document.body.style.setProperty('--background-white', '#131321');
+    //   document.body.style.setProperty('--black', '#ebebeb');
+    //   document.body.style.setProperty('--gray', '#b8b8b8');
+    //   document.body.style.setProperty('--gray-2', '#b8b8b8');
+    //   document.body.style.setProperty('--gray-3', '#b8b8b8');
+    //   document.body.style.setProperty('--boxShadow', 'rgba(255,255,255,.1');
+    //   document.body.style.setProperty('--black-03', 'rgba(255,255,255,.7');
+    //   // document.body.style.setProperty('--white', 'black');
+    //   // document.body.style.setProperty('--white', 'black');
+    //   // document.body.style.setProperty('--white', 'black');
+    // }
   };
   return (
     <div className={styles.container} id="navbarContainer">
@@ -87,10 +102,18 @@ export default function Navbar() {
         >
           Contact
         </li>
-        <li onClick={changeTheme}>
-          <BsMoon></BsMoon>
-          Dark
-        </li>
+        {theme === false && (
+          <li onClick={changeTheme}>
+            <BsMoon></BsMoon>
+            Dark
+          </li>
+        )}
+        {theme === true && (
+          <li onClick={changeTheme}>
+            <BsSun></BsSun>
+            Light
+          </li>
+        )}
       </ul>
     </div>
   );

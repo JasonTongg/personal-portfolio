@@ -91,6 +91,7 @@ let otherSkill = [
 
 export default function Skills() {
   let [skill, setSkill] = useState(true);
+  let [active, setActive] = useState(0);
 
   return (
     <div className={styles.container} id="skills">
@@ -100,18 +101,20 @@ export default function Skills() {
       </div>
       <div className={styles.buttons}>
         <div
-          className={styles.button}
+          className={`${styles.button} ${active === 0 && styles.active}`}
           onClick={() => {
             setSkill(true);
+            setActive(0);
           }}
         >
           <CgWebsite></CgWebsite>
           <h3>Front-end</h3>
         </div>
         <div
-          className={styles.button}
+          className={`${styles.button} ${active === 1 && styles.active}`}
           onClick={() => {
             setSkill(false);
+            setActive(1);
           }}
         >
           <BsCodeSlash></BsCodeSlash>

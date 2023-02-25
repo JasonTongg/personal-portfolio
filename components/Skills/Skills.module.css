@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  color: var(--black);
+  color: var(--gray-2);
 }
 
 .button {
@@ -37,6 +37,12 @@
   gap: 0.5rem;
   font-size: 1.3rem;
   cursor: pointer;
+  color: var(--gray-2);
+}
+
+.active,
+.active svg {
+  color: var(--black);
 }
 
 .button svg {

@@ -1,0 +1,126 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  transition: all 0.3s;
+}
+
+.content {
+  background-color: white;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.content > p {
+  text-align: justify;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info img {
+  width: 100% !important;
+  object-fit: cover;
+  height: auto !important;
+  border-radius: 30px;
+  max-height: 250px;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  /* box-shadow: 4px 8px 24px var(--boxShadow); */
+  border: 1px solid var(--black-03);
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.toolsItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.toolsItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.buttons {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.buttons button {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.buttons button svg {
+  font-size: 1.2rem;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}

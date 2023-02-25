@@ -56,10 +56,15 @@ export default function Hero() {
             seeking new ways to improve my skills and stay up-to-date with the
             latest technologies.
           </p>
-          <div className={styles.button}>
-            <p>Say Hello</p>
-            <IoPaperPlaneOutline></IoPaperPlaneOutline>
-          </div>
+          <Link
+            href="https://www.linkedin.com/in/jason-tong-42600319a/"
+            target="_blank"
+          >
+            <div className={styles.button}>
+              <p>Say Hello</p>
+              <IoPaperPlaneOutline></IoPaperPlaneOutline>
+            </div>
+          </Link>
         </div>
       </div>
       <div className={styles.imageProfile}></div>

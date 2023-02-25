@@ -43,6 +43,7 @@
 
 .navbar li {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .container p {

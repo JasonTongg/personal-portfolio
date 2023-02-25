@@ -29,4 +29,22 @@
   justify-content: center;
   gap: 0.3rem;
   color: var(--black);
+  animation-name: show;
+  animation-duration: 0.4s;
+  color: var(--black);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
 }

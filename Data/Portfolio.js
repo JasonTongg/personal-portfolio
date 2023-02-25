@@ -1,10 +1,10 @@
 let data = [
   {
-    title: 'Youtube Clone',
+    title: 'J-Youtube',
     demo: 'https://youtube-clone-jason.vercel.app/',
     github: 'https://github.com/JasonTongg/youtube-clone',
     // image: 'image link / path',
-    desc: 'desc',
+    desc: 'J-Youtube is a video-sharing platform that allows users to view videos. Users can watch a variety of content on YouTube, including music videos, educational videos, vlogs, comedy sketches, and more. Overall, YouTube has revolutionized the way people consume video content, providing a platform for creative expression, entertainment, education, and more. ',
     tools: ['NextJs', 'Redux', 'Axios'],
   },
   {
@@ -13,7 +13,7 @@ let data = [
     github: 'https://github.com/JasonTongg/J-Movie',
     image:
       'https://i.pinimg.com/originals/46/26/b5/4626b5a01780f1e5d54af829bd32c449.png',
-    desc: 'desc',
+    desc: "J-Movie is a website based that offers a vast library of movies, TV shows, documentaries, and more. Users can access J-Movie content from a variety of devices, including smartphones, tablets, and desktop. J-Movie's is constantly updated with new releases and classic titles from a range of genres, such as drama, action, comedy, horror, and more. The service also produces its own original content, including TV shows and movies, which have gained critical acclaim and a dedicated following.",
     tools: ['ReactJS', 'Styles-components', 'Redux', 'Axios', 'Material UI'],
   },
   {
@@ -22,7 +22,7 @@ let data = [
     github: 'https://github.com/JasonTongg/BinarProject-RentalCar',
     image:
       'https://i.pinimg.com/564x/f6/d9/9f/f6d99f036e8b7642731d936dcf4f3692.jpg',
-    desc: 'desc',
+    desc: 'Binar car rental is an online platform that enables users to rent a car for a specified period of time. These websites typically offer a wide range of vehicles to choose from, including cars, SUVs, trucks, and vans. Users can browse through available vehicles, select the dates and times they wish to rent the car. Overall, binar rental car provides a convenient and flexible option for individuals or businesses in need of a vehicle for a temporary period, whether it be for a weekend road trip or a month-long business trip.',
     tools: [
       'ReactJS',
       'Styled-components',
@@ -40,7 +40,7 @@ let data = [
     ],
     image:
       'https://i.pinimg.com/564x/cc/f8/ee/ccf8eeb831c8efec22cfc516c2b6be52.jpg',
-    desc: 'desc',
+    desc: 'Pizzaria is an online platform that allows users to order pizza for delivery. Pizzaria offer a variety of pizza toppings and styles to choose from, including classic options like pepperoni or sausage, as well as more unique choices like buffalo chicken or vegetarian options. Users can browse through the available menu items, After selecting their pizza and pay for their order online pizzaria also offer order tracking or notifications to keep users updated on the status of their order.',
     tools: [
       'ReactJS',
       'Styled-components',
@@ -56,7 +56,7 @@ let data = [
     github: 'https://github.com/JasonTongg/Comfy_Sloth',
     image:
       'https://i.pinimg.com/564x/05/a5/42/05a542eb7c2063baba0503504d2d12a4.jpg',
-    desc: 'desc',
+    desc: "Comfy Sloth is an online platform that offers a wide range of furniture products for sale, including chairs, tables, sofas, beds, and more. Comft Sloth feature a variety of styles, materials, and designs to suit different preferences and budgets. Users can browse through the website's inventory, filter results based on specific criteria such as price or style, and view detailed product information and images.",
     tools: [
       'ReactJS',
       'Redux',

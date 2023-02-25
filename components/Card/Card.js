@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {BsArrowRightShort} from 'react-icons/bs';
 import Link from 'next/link';
 
-export default function Card({data}) {
+export default function Card({data, setModel, setModelIndex, idx}) {
   return (
     <div className={styles.container}>
       <Image
@@ -42,7 +42,13 @@ export default function Card({data}) {
           </Link>
         )}
 
-        <div className={styles.button}>
+        <div
+          className={styles.button}
+          onClick={() => {
+            setModel(true);
+            setModelIndex(idx);
+          }}
+        >
           <p>Details</p>
           <BsArrowRightShort></BsArrowRightShort>
         </div>
