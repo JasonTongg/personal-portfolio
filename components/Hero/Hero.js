@@ -48,7 +48,7 @@ export default function Hero() {
               repeat={Infinity}
             />
           </div>
-          <p>
+          <p className={styles.contentP}>
             I{"'"}m active Binus University student in Jakarta. I{"'"}m very
             passion in frontend development and dedicated to creating visually
             appealing and user-friendly websites and applications. I{"'"}m

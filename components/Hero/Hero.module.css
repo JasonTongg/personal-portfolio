@@ -135,3 +135,103 @@
     border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
   }
 }
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .content,
+  .contentInfo {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding-top: 0;
+  }
+
+  .imageProfile {
+    width: 400px;
+    height: 400px;
+    grid-row-start: 1;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .line {
+    width: 60px;
+  }
+
+  .contentInfo {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .contentHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .contentHeader h1 {
+    font-size: 3rem;
+  }
+
+  .contentHeader img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .imageProfile {
+    width: 90%;
+    height: 90vmin;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .sosmed {
+    flex-direction: row;
+  }
+
+  .container {
+    grid-template-rows: auto 1fr;
+  }
+
+  .line {
+    width: 0px;
+  }
+
+  .contentInfo {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .contentHeader h2 {
+    font-size: 1.2rem;
+  }
+  .contentHeader h1 {
+    font-size: 2rem;
+  }
+  .contentHeader img {
+    width: 35px;
+    height: 35px;
+  }
+  .contentP {
+    line-height: 1.4rem !important;
+  }
+}

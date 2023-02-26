@@ -27,6 +27,8 @@
   grid-template-columns: 1fr 2fr;
   gap: 4rem;
   width: 100%;
+  grid-auto-columns: auto;
+  justify-content: center;
 }
 
 .contentContainer {
@@ -44,9 +46,10 @@
 }
 
 .contentItems {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   width: 100%;
 }
@@ -128,4 +131,64 @@
 
 .button:hover {
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .image img,
+  .image div {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contentItem {
+    padding: 1.5rem;
+  }
+
+  .contentItems {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contentItem:last-of-type {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .contentContainer {
+    align-items: center;
+  }
+  .contentItem {
+    padding: 0.5rem;
+  }
+
+  .contentItem svg {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .contentItem:last-of-type {
+    grid-column: auto;
+  }
 }
