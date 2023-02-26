@@ -16,12 +16,12 @@ let data = [
     type: ['Framework'],
   },
   {
-    company: 'Udemy',
-    title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+    company: 'Binar Academy',
+    title: 'The Most Progressive Student',
     image: '',
-    credentials:
-      'https://www.udemy.com/certificate/UC-d3e220e4-8b01-472f-8342-8b21399acfcf/',
-    type: ['Framework'],
+    certificate:
+      'https://drive.google.com/file/d/1Ykbe-L8fskT2o8Wq8dmmxafUGUPetArC/view?usp=sharing',
+    type: ['Awards'],
   },
   {
     company: 'Binar Academy',
@@ -32,12 +32,20 @@ let data = [
     type: ['Bootcamp'],
   },
   {
-    company: 'Udemy',
-    title: 'React Tutorial and Projects Course (2022)',
+    company: 'Harisenin.com',
+    title: 'Full Stack Web Developer Bootcamp',
     image: '',
-    credentials:
-      'https://www.udemy.com/certificate/UC-0ef369ef-3210-41f8-a5df-90b888c529e7/',
-    type: ['Framework'],
+    certificate:
+      'https://drive.google.com/file/d/1KLnsh9Z__le6UfpI4cxPBcnXVgYUq-yi/view?usp=sharing',
+    type: ['Bootcamp'],
+  },
+  {
+    company: 'BNCC x Tiket.com',
+    title: 'Frontend Development Bootcamp - ReactJS',
+    image: '',
+    certificate:
+      'https://drive.google.com/file/d/1G-GJ94h5vd-CNM2Qy7rSFnpglEN3gRia/view?usp=sharing',
+    type: ['Bootcamp'],
   },
   {
     company: 'Timedoor Academy',
@@ -46,6 +54,22 @@ let data = [
     credentials:
       'https://pro.timedooracademy.com/certificate?course=html&courseId=2&title=Website%20Development',
     type: ['Bootcamp'],
+  },
+  {
+    company: 'Udemy',
+    title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+    image: '',
+    credentials:
+      'https://www.udemy.com/certificate/UC-d3e220e4-8b01-472f-8342-8b21399acfcf/',
+    type: ['Framework'],
+  },
+  {
+    company: 'Udemy',
+    title: 'React Tutorial and Projects Course (2022)',
+    image: '',
+    credentials:
+      'https://www.udemy.com/certificate/UC-0ef369ef-3210-41f8-a5df-90b888c529e7/',
+    type: ['Framework'],
   },
   {
     company: 'Udemy',
@@ -84,22 +108,6 @@ let data = [
     image: '',
     credentials: 'https://ude.my/UC-8da6e6dd-d781-4b29-a293-4e95c3afdae3',
     type: ['Basic Web'],
-  },
-  {
-    company: 'Harisenin.com',
-    title: 'Full Stack Web Developer Bootcamp',
-    image: '',
-    certificate:
-      'https://drive.google.com/file/d/1KLnsh9Z__le6UfpI4cxPBcnXVgYUq-yi/view?usp=sharing',
-    type: ['Bootcamp'],
-  },
-  {
-    company: 'BNCC x Tiket.com',
-    title: 'Frontend Development Bootcamp - ReactJS',
-    image: '',
-    certificate:
-      'https://drive.google.com/file/d/1G-GJ94h5vd-CNM2Qy7rSFnpglEN3gRia/view?usp=sharing',
-    type: ['Bootcamp'],
   },
   {
     company: 'Anak Teknik Indonesia',
@@ -159,14 +167,6 @@ let data = [
     image: '',
     credentials: 'https://www.dicoding.com/certificates/NVP7K345VZR0',
     type: ['Framework'],
-  },
-  {
-    company: 'Binar Academy',
-    title: 'The Most Progressive Student',
-    image: '',
-    certificate:
-      'https://drive.google.com/file/d/1Ykbe-L8fskT2o8Wq8dmmxafUGUPetArC/view?usp=sharing',
-    type: ['Awards'],
   },
 ];
 
