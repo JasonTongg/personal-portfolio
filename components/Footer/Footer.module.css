@@ -9,6 +9,7 @@
   background-color: var(--white);
   margin-top: 4rem;
   box-shadow: 4px -8px 24px var(--boxShadow);
+  text-align: center;
 }
 
 .container > * {
@@ -26,6 +27,9 @@
   justify-content: center;
   gap: 2rem;
   list-style: none;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 1rem;
 }
 
 .sosmed {
