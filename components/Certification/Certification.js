@@ -11,6 +11,7 @@ export default function Certification() {
     setCategory(e.target.innerHTML);
     setLimit(6);
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>

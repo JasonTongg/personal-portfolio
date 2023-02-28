@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styles from './Portfolio.module.css';
 import Card from '../Card/Card';
 import data from '../../Data/Portfolio';
@@ -6,21 +6,9 @@ import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 import Popup from '../PortfolioPopup/Popup';
 
 export default function Portfolio() {
-  // let count = (document.body.innerWidth * 60) / 30000;
-  // console.log(count);
   let [limit, setLimit] = useState(6);
   let [model, setModel] = useState(false);
   let [modelIndex, setModelIndex] = useState(0);
-
-  useEffect(() => {
-    setLimit(
-      Math.round(
-        (window.innerWidth * 70 -
-          16 * (Math.round((window.innerWidth * 70) / 30000) - 1)) /
-          30000
-      ) * 2
-    );
-  }, []);
 
   return (
     <div className={styles.container} id="portfolio">
@@ -46,18 +34,7 @@ export default function Portfolio() {
         </button>
       )}
       {limit === 100 && (
-        <button
-          className={styles.button}
-          onClick={() =>
-            setLimit(
-              Math.round(
-                (window.innerWidth * 70 -
-                  16 * (Math.round((window.innerWidth * 70) / 30000) - 1)) /
-                  30000
-              ) * 2
-            )
-          }
-        >
+        <button className={styles.button} onClick={() => setLimit(6)}>
           Less
           <MdKeyboardArrowUp></MdKeyboardArrowUp>
         </button>

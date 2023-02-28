@@ -76,6 +76,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .button {
@@ -93,13 +95,18 @@
 
 .content {
   height: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
+}
+
+.content > * {
+  height: auto;
 }
 
 .circle {
@@ -130,6 +137,7 @@
   animation-timing-function: linear;
   visibility: hidden;
   animation-fill-mode: forwards;
+  height: auto;
 }
 
 .contentItemsLeft {
@@ -167,5 +175,34 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .contentItems .contentItem .date,
+  .contentItems .contentItem .dateLeft {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contentItems .contentItem > h3 {
+    font-size: 1rem;
+  }
+  .contentItems .contentItem > p {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0;
+    /* width: 100%; */
   }
 }
