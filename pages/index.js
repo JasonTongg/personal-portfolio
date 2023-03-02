@@ -10,9 +10,13 @@ import Portfolio from '@/components/Portfolio/Portfolio';
 import Certification from '@/components/Certification/Certification';
 import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
+import FixedButton from '@/components/FixedButton/FixedButton';
+import Head from 'next/head';
 
 export default function Index() {
   let [navbar, setNavbar] = useState(false);
+  let [button, setButton] = useState(false);
+
   let checkScroll = useCallback(() => {
     let navbar = document.querySelector('#navbarContainer');
     let height = navbar.getBoundingClientRect().height;
@@ -25,6 +29,12 @@ export default function Index() {
     } else {
       setNavbar(false);
     }
+
+    if (height * -1 >= y) {
+      setButton(true);
+    } else {
+      setButton(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -34,6 +44,9 @@ export default function Index() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Jason Portfolio</title>
+      </Head>
       <Navbar />
       <Hero />
       <About />
@@ -44,6 +57,7 @@ export default function Index() {
       <Contact />
       <Footer />
       {navbar && <FixedNavbar />}
+      {button && <FixedButton />}
     </div>
   );
 }

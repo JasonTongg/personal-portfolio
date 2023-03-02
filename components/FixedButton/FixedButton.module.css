@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background: var(--black-08);
+  color: var(--white);
+  height: 32px;
+  width: 32px;
+  padding: 0.5rem;
+  box-sizing: content-box;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.container svg {
+  font-size: 2rem;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px), translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px), translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    display: none;
+  }
+}
