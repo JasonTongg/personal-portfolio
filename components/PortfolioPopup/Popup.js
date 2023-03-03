@@ -31,7 +31,7 @@ export default function Popup({setModel, data}) {
           <Image
             src={data.image || TempImage}
             alt="portfolio thumbnail"
-            width={500}
+            width={300}
             height={300}
             quality={100}
           ></Image>

@@ -21,6 +21,7 @@
   justify-content: center;
   gap: 1rem;
   width: 40%;
+  min-width: 643px;
   animation-name: show;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -68,6 +69,10 @@
   gap: 1rem;
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
+}
+
+.infoContent h2 {
+  text-align: center;
 }
 
 .toolsItems {
@@ -191,5 +196,76 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content {
+    width: 95%;
+    min-width: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .info img {
+    max-height: 280px !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .info img {
+    max-height: 250px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .info img {
+    max-height: 220px !important;
+  }
+  .info p {
+    font-size: 0.8rem;
+  }
+  .buttons button {
+    font-size: 0.8rem;
+  }
+  .toolsItems {
+    font-size: 0.7rem;
+  }
+  .account h3 {
+    font-size: 0.8rem;
+  }
+  .account p {
+    font-size: 0.7rem;
+  }
+  .account {
+    gap: 0.25rem;
+  }
+  .views button,
+  .views button svg {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .info img {
+    max-height: 200px !important;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .info img {
+    max-height: 170px !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .info img {
+    max-height: 140px !important;
+  }
+}
+@media only screen and (max-width: 270px) {
+  .info img {
+    max-height: 120px !important;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .info img {
+    max-height: 100px !important;
   }
 }
