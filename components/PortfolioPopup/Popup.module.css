@@ -13,7 +13,7 @@
 }
 
 .content {
-  border-radius: 30px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,19 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   background-color: rgb(228, 228, 228);
-  padding-bottom: 1rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1.5%;
+  right: 1.5%;
+  color: white;
+  padding: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .info {
@@ -61,8 +73,14 @@
 .toolsItems {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 0.8rem;
+  width: 100%;
+  flex-wrap: wrap;
+  animation-name: show;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .toolsItem {
@@ -84,13 +102,18 @@
 .buttons button {
   background-color: transparent;
   border: none;
-  color: var(--black);
   font-size: 1.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
+  color: var(--gray-3);
+}
+
+.buttons .active,
+.buttons .active svg {
+  color: var(--black);
 }
 
 .buttons button svg {
@@ -102,8 +125,12 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.5rem;
+  animation-name: show;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .views button {
@@ -124,6 +151,34 @@
 
 .views button svg {
   font-size: 0.8rem;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.accountItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.accountContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  animation-name: show;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes show {

@@ -3,9 +3,9 @@ import styles from './Experience.module.css';
 import {MdOutlineSchool, MdOutlineWorkOutline} from 'react-icons/md';
 import {VscOrganization} from 'react-icons/vsc';
 import {IoCalendarOutline} from 'react-icons/io5';
-import {education, exp, organization} from '../../Data/Experience';
 
-export default function Experience() {
+export default function Experience({data}) {
+  let {education, exp, organization} = data;
   let [experience, setExperience] = useState(education);
   return (
     <div className={styles.container} id="experience">

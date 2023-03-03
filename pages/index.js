@@ -12,8 +12,35 @@ import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import FixedButton from '@/components/FixedButton/FixedButton';
 import Head from 'next/head';
+import {frontEndSkills, otherSkill} from '../Data/Skills';
+import CertificationData from '../Data/Certification';
+import {education, exp, organization} from '../Data/Experience';
+import portfolio from '../Data/Portfolio';
 
-export default function Index() {
+export async function getStaticProps(context) {
+  return {
+    props: {
+      skills: {
+        frontEndSkills,
+        otherSkill,
+      },
+      Certification: CertificationData,
+      experience: {
+        education,
+        exp,
+        organization,
+      },
+      portfolio,
+    },
+  };
+}
+
+export default function Index({
+  skills,
+  Certification: certifications,
+  experience,
+  portfolio,
+}) {
   let [navbar, setNavbar] = useState(false);
   let [button, setButton] = useState(false);
 
@@ -50,10 +77,10 @@ export default function Index() {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
-      <Experience />
-      <Portfolio />
-      <Certification />
+      <Skills data={skills} />
+      <Experience data={experience} />
+      <Portfolio data={portfolio} />
+      <Certification data={certifications} />
       <Contact />
       <Footer />
       {navbar && <FixedNavbar />}

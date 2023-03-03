@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import styles from './Certification.module.css';
 import CertifCard from '../CertifCard/CertifCard';
-import data from '../../Data/Certification';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 
-export default function Certification() {
+export default function Certification({data}) {
   let [category, setCategory] = useState('All');
   let [limit, setLimit] = useState(6);
   let filterCategory = (e) => {

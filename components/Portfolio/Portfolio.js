@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import styles from './Portfolio.module.css';
 import Card from '../Card/Card';
-import data from '../../Data/Portfolio';
 import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 import Popup from '../PortfolioPopup/Popup';
 
-export default function Portfolio() {
+export default function Portfolio({data}) {
   let [limit, setLimit] = useState(6);
   let [model, setModel] = useState(false);
   let [modelIndex, setModelIndex] = useState(0);
