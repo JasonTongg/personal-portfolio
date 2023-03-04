@@ -171,4 +171,7 @@
   .skillContainer {
     justify-items: center;
   }
+  .skill {
+    width: 130px;
+  }
 }
