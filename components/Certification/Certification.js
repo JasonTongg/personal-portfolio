@@ -65,7 +65,13 @@ export default function Certification({data}) {
           : data
               .filter((item) => item.type.some((item) => item === category))
               .map((item, idx) => (
-                <CertifCard key={idx} data={item}></CertifCard>
+                <CertifCard
+                  key={idx}
+                  data={item}
+                  data2={data.filter((item) =>
+                    item.type.some((item) => item === category)
+                  )}
+                ></CertifCard>
               ))}
       </div>
       {limit === 6 && category === 'All' && (

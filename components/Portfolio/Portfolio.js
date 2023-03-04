@@ -5,9 +5,13 @@ import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 import Popup from '../PortfolioPopup/Popup';
 
 export default function Portfolio({data}) {
-  let [limit, setLimit] = useState(window.innerWidth <= 640 ? 3 : 6);
+  let [limit, setLimit] = useState(6);
   let [model, setModel] = useState(false);
   let [modelIndex, setModelIndex] = useState(0);
+
+  useEffect(() => {
+    setLimit(window.innerWidth <= 640 ? 3 : 6);
+  }, []);
 
   return (
     <div className={styles.container} id="portfolio">

@@ -17,7 +17,7 @@ import bncclnt from '../../public/Assets/bncclnt.png';
 import bncctiket from '../../public/Assets/bncctiket.png';
 import anakteknik from '../../public/Assets/anakteknik.png';
 
-export default function CertifCard({data}) {
+export default function CertifCard({data, small, data2}) {
   let image;
   if (data.company === 'Udemy') {
     image = Udemy;
@@ -44,11 +44,14 @@ export default function CertifCard({data}) {
   } else if (data.company === 'Anak Teknik Indonesia') {
     image = anakteknik;
   } else {
-    console.log(data.company);
     image = tempPhoto;
   }
   return (
-    <div className={`${styles.container} ${styles.showAnimation}`}>
+    <div
+      className={`${styles.container} ${styles.showAnimation} ${
+        data2?.length ? styles.maxWidth : ''
+      }`}
+    >
       <Image
         src={image}
         alt="Certificate photo"

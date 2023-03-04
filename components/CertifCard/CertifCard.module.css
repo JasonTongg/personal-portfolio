@@ -12,6 +12,10 @@
   gap: 0.5rem;
 }
 
+.maxWidth {
+  max-width: 350px;
+}
+
 .showAnimation {
   transition: all 0.3s;
   animation-name: show;
