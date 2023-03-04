@@ -140,6 +140,11 @@
     gap: 0.5rem;
   }
 
+  .skillContainer {
+    padding: 0;
+    padding-top: 0.5rem;
+  }
+
   .contents h2,
   .content h2 {
     text-align: center;
@@ -159,5 +164,11 @@
 @media only screen and (max-width: 500px) {
   .container {
     padding-inline: 0;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .skillContainer {
+    justify-items: center;
   }
 }
