@@ -33,7 +33,7 @@
 .contentItem {
   width: 100%;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 30px;
   box-shadow: 4px 8px 24px var(--boxShadow);
   background-color: var(--white);
