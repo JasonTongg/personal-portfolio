@@ -55,10 +55,10 @@ export default function About() {
             bootcamp for self improvement, such as: Binar Academy, Timedoor
             Academy and many more...
           </p>
-          <button onClick={saveFile} className={styles.button}>
+          <a onClick={saveFile} className={styles.button}>
             <p>Download CV</p>
             <FiDownloadCloud></FiDownloadCloud>
-          </button>
+          </a>
         </div>
       </div>
     </div>
