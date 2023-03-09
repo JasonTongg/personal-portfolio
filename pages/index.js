@@ -85,6 +85,7 @@ export default function Index({
       <Footer />
       {navbar && <FixedNavbar />}
       {button && <FixedButton />}
+      <div className={styles.background}></div>
     </div>
   );
 }

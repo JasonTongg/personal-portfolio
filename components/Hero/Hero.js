@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import Wave from '../../public/Assets/wave.png';
@@ -8,10 +8,67 @@ import {FiGithub} from 'react-icons/fi';
 import {IoPaperPlaneOutline} from 'react-icons/io5';
 import Link from 'next/link';
 import {TypeAnimation} from 'react-type-animation';
+import cloud1 from '../../public/Assets/cloud-1.png';
+import cloud2 from '../../public/Assets/cloud-2.png';
+import cloud3 from '../../public/Assets/cloud-3.png';
+import cloud4 from '../../public/Assets/cloud-4.png';
 
 export default function Hero() {
+  useEffect(() => {
+    let cloud1 = document.querySelector('#cloud1');
+    let cloud2 = document.querySelector('#cloud2');
+    let cloud3 = document.querySelector('#cloud3');
+    let cloud4 = document.querySelector('#cloud4');
+
+    window.addEventListener('scroll', () => {
+      let value = window.scrollY;
+      cloud1.style.left = `calc(${value * 0.2}px + 60%)`;
+      cloud2.style.right = `calc(${value * 0.2}px + 70%)`;
+      cloud3.style.right = `calc(${value * 0.2}px + 90%)`;
+      cloud4.style.left = `calc(${value * 0.2}px + 90%)`;
+
+      return window.removeEventListener('scroll', () => {
+        cloud1.style.left = `calc(${value * 0.2}px + 60%)`;
+        cloud2.style.right = `calc(${value * 0.2}px + 70%)`;
+        cloud3.style.right = `calc(${value * 0.2}px + 90%)`;
+        cloud4.style.left = `calc(${value * 0.2}px + 90%)`;
+      });
+    });
+  }, []);
   return (
     <div className={styles.container}>
+      <Image
+        src={cloud1}
+        alt="cloud"
+        className={styles.cloud1}
+        height={100}
+        width={500}
+        id="cloud1"
+      ></Image>
+      <Image
+        src={cloud2}
+        alt="cloud"
+        className={styles.cloud2}
+        height={100}
+        width={500}
+        id="cloud2"
+      ></Image>
+      <Image
+        src={cloud3}
+        alt="cloud"
+        className={styles.cloud3}
+        height={100}
+        width={500}
+        id="cloud3"
+      ></Image>
+      <Image
+        src={cloud4}
+        alt="cloud"
+        className={styles.cloud4}
+        height={100}
+        width={500}
+        id="cloud4"
+      ></Image>
       <div className={styles.content}>
         <div className={styles.sosmed}>
           <Link href="https://www.instagram.com/tongchenyi_/" target="_blank">
