@@ -1,50 +1,19 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
+import {useRouter} from 'next/router';
 import Navbar from '@/components/Navbar/Navbar';
-import Hero from '@/components/Hero/Hero';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import FixedNavbar from '@/components/FixedNavbar/FixedNavbar';
-import About from '@/components/About/About';
-import Skills from '@/components/Skills/Skills';
-import Experience from '@/components/Experience/Experience';
-import Portfolio from '@/components/Portfolio/Portfolio';
-import Certification from '@/components/Certification/Certification';
-import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import FixedButton from '@/components/FixedButton/FixedButton';
 import Head from 'next/head';
-import {frontEndSkills, otherSkill} from '../Data/Skills';
-import CertificationData from '../Data/Certification';
-import {education, exp, organization} from '../Data/Experience';
-import portfolio from '../Data/Portfolio';
 import Image from 'next/image';
-import Rocket from '../public/Assets/rocket.png';
+import Rocket from '../../public/Assets/rocket.png';
 
-export async function getStaticProps(context) {
-  return {
-    props: {
-      skills: {
-        frontEndSkills,
-        otherSkill,
-      },
-      Certification: CertificationData,
-      experience: {
-        education,
-        exp,
-        organization,
-      },
-      portfolio,
-    },
-  };
-}
-
-export default function Index({
-  skills,
-  Certification: certifications,
-  experience,
-  portfolio,
-}) {
+export default function Detail() {
+  let router = useRouter();
   let [navbar, setNavbar] = useState(false);
   let [button, setButton] = useState(false);
+  let {detail} = router.query;
 
   let checkScroll = useCallback(() => {
     let navbar = document.querySelector('#navbarContainer');
@@ -83,13 +52,7 @@ export default function Index({
         <title>Jason Portfolio</title>
       </Head>
       <Navbar />
-      <Hero />
-      <About />
-      <Skills data={skills} />
-      <Experience data={experience} />
-      <Portfolio data={portfolio} />
-      <Certification data={certifications} />
-      <Contact />
+      <h1>{detail}</h1>
       <Footer />
       {navbar && <FixedNavbar />}
       {button && <FixedButton />}

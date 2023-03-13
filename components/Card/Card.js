@@ -4,6 +4,7 @@ import tempPhoto from '../../public/Assets/temp-photo.png';
 import Image from 'next/image';
 import {BsArrowRightShort} from 'react-icons/bs';
 import Link from 'next/link';
+import Router from 'next/router';
 
 export default function Card({data, setModel, setModelIndex, idx}) {
   return (
@@ -42,16 +43,10 @@ export default function Card({data, setModel, setModelIndex, idx}) {
           </Link>
         )}
 
-        <div
-          className={styles.button}
-          onClick={() => {
-            setModel(true);
-            setModelIndex(idx);
-          }}
-        >
+        <Link className={styles.button} href={`/detail/${idx}`}>
           <p>Details</p>
           <BsArrowRightShort></BsArrowRightShort>
-        </div>
+        </Link>
       </div>
     </div>
   );
