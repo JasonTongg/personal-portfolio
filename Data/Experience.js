@@ -51,13 +51,13 @@ export let exp = [
     date: 'Apl 2022 - Jun 2022',
   },
   {
-    degree: 'Tech Event Organizer',
+    degree: 'Java Programming Instructor',
     location: 'Bina Nusantara Computer Club',
     date: 'Jan 2021 - May 2021',
   },
   {
-    degree: 'Activist',
-    location: 'Bina Nusantara Computer Club',
+    degree: 'Scholarship Mentor',
+    location: 'Binus Student Learning Community',
     date: 'Sep 2020 - Feb 2021',
   },
 ];

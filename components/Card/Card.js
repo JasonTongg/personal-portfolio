@@ -43,7 +43,7 @@ export default function Card({data, setModel, setModelIndex, idx}) {
           </Link>
         )}
 
-        <Link className={styles.button} href={`/detail/${idx}`}>
+        <Link className={styles.button} href={`/detail/${data}`}>
           <p>Details</p>
           <BsArrowRightShort></BsArrowRightShort>
         </Link>
