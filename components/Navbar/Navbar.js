@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Navbar.module.css';
+import {TbChevronsUpRight} from 'react-icons/tb';
 
 export default function Navbar() {
   return (
@@ -51,16 +52,17 @@ export default function Navbar() {
         >
           Portfolio
         </li>
-        <li
-          onClick={() => {
-            document
-              .getElementById('contact')
-              .scrollIntoView({behavior: 'smooth', block: 'center'});
-          }}
-        >
-          Contact
-        </li>
       </ul>
+      <p
+        onClick={() => {
+          document
+            .getElementById('contact')
+            .scrollIntoView({behavior: 'smooth', block: 'center'});
+        }}
+      >
+        Contact
+        <TbChevronsUpRight></TbChevronsUpRight>
+      </p>
     </div>
   );
 }

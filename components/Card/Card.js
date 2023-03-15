@@ -43,7 +43,13 @@ export default function Card({data, setModel, setModelIndex, idx}) {
           </Link>
         )}
 
-        <Link className={styles.button} href={`/detail/${data}`}>
+        <Link
+          className={styles.button}
+          href={`/detail/${data.title}`}
+          onClick={() => {
+            window.localStorage.setItem('title', data.title);
+          }}
+        >
           <p>Details</p>
           <BsArrowRightShort></BsArrowRightShort>
         </Link>

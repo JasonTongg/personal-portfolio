@@ -20,26 +20,30 @@
 
 .cloud1 {
   top: 85%;
-  left: 60%;
+  /* left: 60%; */
+  right: -10%;
   width: 521px;
 }
 
 .cloud2 {
   top: 85%;
-  right: 70%;
+  /* right: 70%; */
+  left: -11%;
   width: 447px;
   z-index: 0;
 }
 
 .cloud3 {
   top: 68%;
-  right: 90%;
+  /* right: 90%; */
+  left: -13%;
   width: 232px;
 }
 
 .cloud4 {
   top: 65%;
-  left: 90%;
+  /* left: 90%; */
+  right: -13%;
   width: 200px;
 }
 
@@ -172,17 +176,6 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
-  .container {
-    gap: 2rem;
-  }
-
-  .content,
-  .contentInfo {
-    gap: 2rem;
-  }
-}
-
 @media only screen and (max-width: 1350px) {
   .container {
     grid-template-columns: 1fr;
@@ -196,11 +189,98 @@
     height: 400px;
     grid-row-start: 1;
   }
+
+  .cloud1 {
+    top: 88%;
+  }
+
+  .cloud2 {
+    top: 88%;
+  }
+
+  .cloud3 {
+    top: 80%;
+  }
+
+  .cloud4 {
+    top: 78%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .content,
+  .contentInfo {
+    gap: 2rem;
+  }
+
+  .cloud1 {
+    top: 90%;
+    width: 321px;
+  }
+
+  .cloud2 {
+    top: 90%;
+    width: 300px;
+  }
+
+  .cloud3 {
+    top: 85%;
+    width: 132px;
+  }
+
+  .cloud4 {
+    top: 83%;
+    width: 100px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .container {
     width: 90%;
+  }
+
+  .cloud1,
+  .cloud2,
+  .cloud3,
+  .cloud4 {
+    z-index: 1;
+  }
+
+  .cloud1,
+  .cloud4 {
+    right: 20%;
+  }
+
+  .cloud2,
+  .cloud3 {
+    left: 0;
+  }
+
+  .cloud1 {
+    width: 251px;
+  }
+
+  .cloud2 {
+    width: 230px;
+  }
+
+  .cloud3 {
+    top: 86%;
+    width: 120px;
+  }
+
+  .cloud4 {
+    top: 85%;
+    width: 100px;
+  }
+
+  .button {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -211,6 +291,13 @@
 
   .contentInfo {
     gap: 1rem;
+  }
+
+  .cloud1,
+  .cloud2,
+  .cloud3,
+  .cloud4 {
+    display: none;
   }
 }
 

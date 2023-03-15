@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import Wave from '../../public/Assets/wave.png';
@@ -14,24 +14,31 @@ import cloud3 from '../../public/Assets/cloud-3.png';
 import cloud4 from '../../public/Assets/cloud-4.png';
 
 export default function Hero() {
+  let [tanda, setTanda] = useState(-1);
   useEffect(() => {
     let cloud1 = document.querySelector('#cloud1');
     let cloud2 = document.querySelector('#cloud2');
     let cloud3 = document.querySelector('#cloud3');
     let cloud4 = document.querySelector('#cloud4');
 
+    if (window.innerWidth <= 750) {
+      setTanda(1);
+    } else {
+      setTanda(-1);
+    }
+
     window.addEventListener('scroll', () => {
       let value = window.scrollY;
-      cloud1.style.left = `calc(${value * 0.2}px + 60%)`;
-      cloud2.style.right = `calc(${value * 0.2}px + 70%)`;
-      cloud3.style.right = `calc(${value * 0.2}px + 90%)`;
-      cloud4.style.left = `calc(${value * 0.2}px + 90%)`;
+      cloud1.style.right = `calc(${value * 0.2 * -1}px + ${10 * tanda}%)`;
+      cloud2.style.left = `calc(${value * 0.2 * -1}px + ${11 * tanda}%)`;
+      cloud3.style.left = `calc(${value * 0.2 * -1}px + ${13 * tanda}%)`;
+      cloud4.style.right = `calc(${value * 0.2 * -1}px + ${13 * tanda}%)`;
 
       return window.removeEventListener('scroll', () => {
-        cloud1.style.left = `calc(${value * 0.2}px + 60%)`;
-        cloud2.style.right = `calc(${value * 0.2}px + 70%)`;
-        cloud3.style.right = `calc(${value * 0.2}px + 90%)`;
-        cloud4.style.left = `calc(${value * 0.2}px + 90%)`;
+        cloud1.style.right = `calc(${value * 0.2 * -1}px + ${10 * tanda}%)`;
+        cloud2.style.left = `calc(${value * 0.2 * -1}px + ${11 * tanda}%)`;
+        cloud3.style.left = `calc(${value * 0.2 * -1}px + ${13 * tanda}%)`;
+        cloud4.style.right = `calc(${value * 0.2 * -1}px + ${13 * tanda}%)`;
       });
     });
   }, []);

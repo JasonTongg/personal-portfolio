@@ -8,6 +8,7 @@ import FixedButton from '@/components/FixedButton/FixedButton';
 import Head from 'next/head';
 import Image from 'next/image';
 import Rocket from '../../public/Assets/rocket.png';
+import Details from '@/components/Detail/Detail';
 
 export default function Detail() {
   let router = useRouter();
@@ -52,7 +53,7 @@ export default function Detail() {
         <title>Jason Portfolio</title>
       </Head>
       <Navbar />
-      <h1>{detail}</h1>
+      <Details title={detail} />
       <Footer />
       {navbar && <FixedNavbar />}
       {button && <FixedButton />}
