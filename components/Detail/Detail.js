@@ -1,19 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styles from './Detail.module.css';
-import portfolioData from '../../Data/Portfolio';
 import {FiDownloadCloud} from 'react-icons/fi';
 import Link from 'next/link';
 
-export default function Detail(props) {
-  let [title, setTitle] = useState(props.title);
-  useEffect(() => {
-    console.log(props.title);
-    if (!props.title) {
-      setTitle(window.localStorage.getItem('title'));
-    }
-  }, [props.title]);
-  let detailData = portfolioData.filter((item) => item.title === title);
-  let data = detailData[0];
+export default function Detail({data}) {
   if (data) {
     return (
       <div className={styles.container}>

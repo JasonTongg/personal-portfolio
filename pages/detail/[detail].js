@@ -9,8 +9,32 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Rocket from '../../public/Assets/rocket.png';
 import Details from '@/components/Detail/Detail';
+import portfolioData from '../../Data/Portfolio';
 
-export default function Detail() {
+export async function getStaticProps(context) {
+  console.log(context);
+  return {
+    props: {
+      data: portfolioData.filter(
+        (item) => item.title === context.params.detail
+      )[0],
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  let param = portfolioData.map((item) => ({
+    params: {
+      detail: item.title,
+    },
+  }));
+  return {
+    paths: param,
+    fallback: 'blocking',
+  };
+}
+
+export default function Detail({data}) {
   let router = useRouter();
   let [navbar, setNavbar] = useState(false);
   let [button, setButton] = useState(false);
@@ -53,7 +77,7 @@ export default function Detail() {
         <title>Jason Portfolio</title>
       </Head>
       <Navbar />
-      <Details title={detail} />
+      <Details data={data} />
       <Footer />
       {navbar && <FixedNavbar />}
       {button && <FixedButton />}
