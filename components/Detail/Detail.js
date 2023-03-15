@@ -10,14 +10,38 @@ export default function Detail({data}) {
         <h2>{data.title}</h2>
         <p>{data.desc}</p>
         <div className={styles.buttons}>
-          <Link href={data.demo} className={styles.button} target="_blank">
-            <p>Demo</p>
-            <IoPaperPlaneOutline></IoPaperPlaneOutline>
-          </Link>
-          <Link href={data.github} className={styles.button} target="_blank">
-            <p>Github</p>
-            <IoPaperPlaneOutline></IoPaperPlaneOutline>
-          </Link>
+          {data.demo && (
+            <Link href={data.demo} className={styles.button} target="_blank">
+              <p>Demo</p>
+              <IoPaperPlaneOutline></IoPaperPlaneOutline>
+            </Link>
+          )}
+          {typeof data.github === 'string' && (
+            <Link href={data.github} target="_blank" className={styles.button}>
+              <p>Github</p>
+              <IoPaperPlaneOutline></IoPaperPlaneOutline>
+            </Link>
+          )}
+          {typeof data.github !== 'string' && (
+            <Link
+              href={data.github[0]}
+              target="_blank"
+              className={styles.button}
+            >
+              <p>Github</p>
+              <IoPaperPlaneOutline></IoPaperPlaneOutline>
+            </Link>
+          )}
+          {typeof data.github !== 'string' && (
+            <Link
+              href={data.github[1]}
+              target="_blank"
+              className={styles.button}
+            >
+              <p>Github</p>
+              <IoPaperPlaneOutline></IoPaperPlaneOutline>
+            </Link>
+          )}
         </div>
       </div>
     </div>
