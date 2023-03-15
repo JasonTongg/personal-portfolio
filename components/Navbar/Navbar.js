@@ -59,6 +59,7 @@ export default function Navbar() {
             .getElementById('contact')
             .scrollIntoView({behavior: 'smooth', block: 'center'});
         }}
+        className={styles.contact}
       >
         Contact
         <TbChevronsUpRight></TbChevronsUpRight>

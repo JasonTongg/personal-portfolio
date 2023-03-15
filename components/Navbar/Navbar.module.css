@@ -89,6 +89,9 @@
   .navbarItem {
     display: none;
   }
+  .contact {
+    display: none !important;
+  }
   .container {
     justify-content: center;
   }

@@ -12,7 +12,6 @@ import Details from '@/components/Detail/Detail';
 import portfolioData from '../../Data/Portfolio';
 
 export async function getStaticProps(context) {
-  console.log(context);
   return {
     props: {
       data: portfolioData.filter(
