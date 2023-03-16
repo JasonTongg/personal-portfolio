@@ -68,8 +68,13 @@ export default function Index({
       setButton(false);
     }
 
-    let speed = (scroll / document.body?.getBoundingClientRect().height) * 100;
-    rocket.style.top = `${speed + 5}%`;
+    let speed =
+      (scroll /
+        (document.body?.getBoundingClientRect().height - window.innerHeight)) *
+      100;
+    rocket.style.top = `calc(${speed}% - ${
+      rocket.querySelector('img').getBoundingClientRect().height
+    }px)`;
   }, []);
 
   useEffect(() => {
