@@ -14,7 +14,7 @@ let data = [
     image:
       'https://i.pinimg.com/originals/46/26/b5/4626b5a01780f1e5d54af829bd32c449.png',
     desc: "J-Movie is a website based that offers a vast library of movies, TV shows, documentaries, and more. Users can access J-Movie content from a variety of devices, including smartphones, tablets, and desktop. J-Movie's is constantly updated with new releases and classic titles from a range of genres, such as drama, action, comedy, horror, and more. The service also produces its own original content, including TV shows and movies, which have gained critical acclaim and a dedicated following.",
-    tools: ['ReactJS', 'Styles-components', 'Redux', 'Axios', 'Material UI'],
+    tools: ['ReactJS', 'Styled components', 'Redux', 'Axios', 'Material UI'],
   },
   {
     title: 'Binar Rental Car',
