@@ -132,27 +132,28 @@ export default function Detail({data}) {
           </div>
           <div className={styles.line}></div>
           <div className={styles.accountContainer}>
-            {data.account.map((item, idx) => (
-              <div className={styles.account} key={idx}>
-                <h3>{item.title}</h3>
-                {item.email && (
+            {data.account &&
+              data.account.map((item, idx) => (
+                <div className={styles.account} key={idx}>
+                  <h3>{item.title}</h3>
+                  {item.email && (
+                    <div className={styles.accountItem}>
+                      <p>Email</p>
+                      <p>: {item.email}</p>
+                    </div>
+                  )}
+                  {item.user && (
+                    <div className={styles.accountItem}>
+                      <p>User</p>
+                      <p>: {item.user}</p>
+                    </div>
+                  )}
                   <div className={styles.accountItem}>
-                    <p>Email</p>
-                    <p>: {item.email}</p>
+                    <p>Password</p>
+                    <p>: {item.password}</p>
                   </div>
-                )}
-                {item.user && (
-                  <div className={styles.accountItem}>
-                    <p>User</p>
-                    <p>: {item.user}</p>
-                  </div>
-                )}
-                <div className={styles.accountItem}>
-                  <p>Password</p>
-                  <p>: {item.password}</p>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
