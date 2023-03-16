@@ -14,7 +14,7 @@ let data = [
     image:
       'https://i.pinimg.com/originals/46/26/b5/4626b5a01780f1e5d54af829bd32c449.png',
     desc: "J-Movie is a website based that offers a vast library of movies, TV shows, documentaries, and more. Users can access J-Movie content from a variety of devices, including smartphones, tablets, and desktop. J-Movie's is constantly updated with new releases and classic titles from a range of genres, such as drama, action, comedy, horror, and more. The service also produces its own original content, including TV shows and movies, which have gained critical acclaim and a dedicated following.",
-    tools: ['ReactJS', 'Styled components', 'Redux', 'Axios', 'Material UI'],
+    tools: ['ReactJS', 'Styled Components', 'Redux', 'Axios', 'Material UI'],
   },
   {
     title: 'Binar Rental Car',
@@ -25,7 +25,7 @@ let data = [
     desc: 'Binar car rental is an online platform that enables users to rent a car for a specified period of time. These websites typically offer a wide range of vehicles to choose from, including cars, SUVs, trucks, and vans. Users can browse through available vehicles, select the dates and times they wish to rent the car. Overall, binar rental car provides a convenient and flexible option for individuals or businesses in need of a vehicle for a temporary period, whether it be for a weekend road trip or a month-long business trip.',
     tools: [
       'ReactJS',
-      'Styled-components',
+      'Styled Components',
       'Material UI',
       'Axios',
       'Redux',
@@ -50,7 +50,7 @@ let data = [
     desc: 'Pizzaria is an online platform that allows users to order pizza for delivery. Pizzaria offer a variety of pizza toppings and styles to choose from, including classic options like pepperoni or sausage, as well as more unique choices like buffalo chicken or vegetarian options. Users can browse through the available menu items, After selecting their pizza and pay for their order online pizzaria also offer order tracking or notifications to keep users updated on the status of their order.',
     tools: [
       'ReactJS',
-      'Styled-components',
+      'Styled Components',
       'Material UI',
       'Axios',
       'Redux',
@@ -67,9 +67,9 @@ let data = [
     tools: [
       'ReactJS',
       'Redux',
-      'Styled-components',
-      'Redux-thunk',
-      'Redux-persist',
+      'Styled Components',
+      'Redux Thunk',
+      'Redux Persist',
     ],
   },
   {
@@ -82,9 +82,9 @@ let data = [
     tools: [
       'ReactJS',
       'Redux',
-      'Styled-components',
+      'Styled Components',
       'Axios',
-      'Redux-Thunk',
+      'Redux Thunk',
       'Auth0',
     ],
   },
@@ -95,7 +95,7 @@ let data = [
     image:
       'https://i.pinimg.com/564x/dc/11/ed/dc11eda0dad951cf3dd6e3cbe727f5ba.jpg',
     desc: 'Jobster is an online platform that provides users to manage their job registration. User can add job to dashboard, delete job, edit job, filter job and also display job information detail. besides that, user can see their statistic about this month progress',
-    tools: ['ReactJS', 'Redux', 'Styled-components', 'Axios'],
+    tools: ['ReactJS', 'Redux', 'Styled Components', 'Axios'],
     account: [
       {
         title: 'Demo Account',
