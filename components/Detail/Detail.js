@@ -130,7 +130,7 @@ export default function Detail({data}) {
               </div>
             ))}
           </div>
-          <div className={styles.line}></div>
+          {data.account && <div className={styles.line}></div>}
           <div className={styles.accountContainer}>
             {data.account &&
               data.account.map((item, idx) => (
