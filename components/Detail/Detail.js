@@ -2,24 +2,17 @@ import React from 'react';
 import styles from './Detail.module.css';
 import {IoPaperPlaneOutline} from 'react-icons/io5';
 import Link from 'next/link';
-import {
-  SiJavascript,
-  SiHtml5,
-  SiReact,
-  SiAuth0,
-  SiRedux,
-  SiNuxtdotjs,
-} from 'react-icons/si';
+import {SiHtml5, SiReact, SiAuth0, SiRedux} from 'react-icons/si';
 import {IoLogoSass} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
 import {TbBrandNextjs} from 'react-icons/tb';
-import {FaVuejs} from 'react-icons/fa';
 import Axios from '../../public/Assets/axios.png';
 import StyledComponents from '../../public/Assets/styled-components.png';
 import MaterialUI from '../../public/Assets/materialUI.png';
 import Javascript from '../../public/Assets/Javascript.png';
 import Vuejs from '../../public/Assets/vuejs.png';
 import Nuxtjs from '../../public/Assets/nuxtjs.png';
+import Parcel from '../../public/Assets/parcel.svg';
 import Image from 'next/image';
 
 export default function Detail({data}) {
@@ -68,9 +61,6 @@ export default function Detail({data}) {
           {data.tools.map((item, idx) => (
             <div className={styles.toolItem} key={idx}>
               <div>
-                {item.toLowerCase() === 'javascript' && (
-                  <SiJavascript></SiJavascript>
-                )}
                 {item.toLowerCase() === 'html' && (
                   <SiHtml5 style={{color: '#FF4B00'}}></SiHtml5>
                 )}
@@ -85,6 +75,9 @@ export default function Detail({data}) {
                 )}
                 {item.toLowerCase() === 'axios' && (
                   <Image src={Axios} alt="axios" width={72} height={38} />
+                )}
+                {item.toLowerCase() === 'parceljs' && (
+                  <Image src={Parcel} alt="parceljs" width={49} height={65} />
                 )}
                 {item.toLowerCase() === 'material ui' && (
                   <Image
