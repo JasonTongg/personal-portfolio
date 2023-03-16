@@ -95,9 +95,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 50%;
+  height: 92px;
+  width: 92px;
 }
 
 .toolItem div svg {

@@ -10,11 +10,17 @@ import {
   SiRedux,
   SiNuxtdotjs,
 } from 'react-icons/si';
-// import {SiAxios} from 'react-icons/si'
 import {IoLogoSass} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
 import {TbBrandNextjs} from 'react-icons/tb';
 import {FaVuejs} from 'react-icons/fa';
+import Axios from '../../public/Assets/axios.png';
+import StyledComponents from '../../public/Assets/styled-components.png';
+import MaterialUI from '../../public/Assets/materialUI.png';
+import Javascript from '../../public/Assets/Javascript.png';
+import Vuejs from '../../public/Assets/vuejs.png';
+import Nuxtjs from '../../public/Assets/nuxtjs.png';
+import Image from 'next/image';
 
 export default function Detail({data}) {
   return (
@@ -77,16 +83,42 @@ export default function Detail({data}) {
                 {item.toLowerCase() === 'reactjs' && (
                   <SiReact style={{color: '#00D1F2'}}></SiReact>
                 )}
-                {/* {item.toLowerCase() === 'axios' && (
-                  <SiAxios style={{color: '#6222DD'}}></SiAxios>
-                )} */}
+                {item.toLowerCase() === 'axios' && (
+                  <Image src={Axios} alt="axios" width={72} height={38} />
+                )}
+                {item.toLowerCase() === 'material ui' && (
+                  <Image
+                    src={MaterialUI}
+                    alt="material ui"
+                    width={53}
+                    height={53}
+                  />
+                )}
+                {item.toLowerCase() === 'styled components' && (
+                  <Image
+                    src={StyledComponents}
+                    alt="styled components"
+                    width={53}
+                    height={53}
+                  />
+                )}
+                {item.toLowerCase() === 'javascript' && (
+                  <Image
+                    src={Javascript}
+                    alt="javascript"
+                    width={53}
+                    height={53}
+                  />
+                )}
                 {item.toLowerCase() === 'auth0' && (
                   <SiAuth0 style={{color: '#DF5022'}}></SiAuth0>
                 )}
                 {item.toLowerCase() === 'nuxtjs' && (
-                  <SiNuxtdotjs style={{color: '#00838F'}}></SiNuxtdotjs>
+                  <Image src={Nuxtjs} alt="Nuxtjs" width={53} height={53} />
                 )}
-                {item.toLowerCase() === 'vuejs' && <FaVuejs></FaVuejs>}
+                {item.toLowerCase() === 'vuejs' && (
+                  <Image src={Vuejs} alt="Vuejs" width={53} height={53} />
+                )}
                 {item.toLowerCase() === 'nextjs' && (
                   <TbBrandNextjs></TbBrandNextjs>
                 )}
