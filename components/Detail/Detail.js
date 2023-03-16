@@ -123,8 +123,8 @@ export default function Detail({data}) {
                   <TbBrandNextjs></TbBrandNextjs>
                 )}
                 {(item.toLowerCase() === 'redux' ||
-                  item.toLowerCase() === 'redux-thunk' ||
-                  item.toLowerCase() === 'redux-persist') && (
+                  item.toLowerCase() === 'redux thunk' ||
+                  item.toLowerCase() === 'redux persist') && (
                   <SiRedux style={{color: '#835EC3'}}></SiRedux>
                 )}
               </div>
