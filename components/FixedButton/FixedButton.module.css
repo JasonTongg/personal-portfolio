@@ -1,5 +1,5 @@
 .container {
-  position: fixed;
+  position: fixed !important;
   bottom: 5%;
   right: 5%;
   background: var(--black-08);
