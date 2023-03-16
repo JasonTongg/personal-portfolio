@@ -57,75 +57,104 @@ export default function Detail({data}) {
         </div>
       </div>
       <div className={styles.content}>
-        <div className={styles.tools}>
-          {data.tools.map((item, idx) => (
-            <div className={styles.toolItem} key={idx}>
-              <div>
-                {item.toLowerCase() === 'html' && (
-                  <SiHtml5 style={{color: '#FF4B00'}}></SiHtml5>
-                )}
-                {item.toLowerCase() === 'scss/sass' && (
-                  <IoLogoSass style={{color: '#CD6699'}}></IoLogoSass>
-                )}
-                {item.toLowerCase() === 'css' && (
-                  <DiCss3 style={{color: '#2196F3'}}></DiCss3>
-                )}
-                {item.toLowerCase() === 'reactjs' && (
-                  <SiReact style={{color: '#00D1F2'}}></SiReact>
-                )}
-                {item.toLowerCase() === 'axios' && (
-                  <Image src={Axios} alt="axios" width={72} height={38} />
-                )}
-                {item.toLowerCase() === 'parceljs' && (
-                  <Image src={Parcel} alt="parceljs" width={49} height={65} />
-                )}
-                {item.toLowerCase() === 'material ui' && (
-                  <Image
-                    src={MaterialUI}
-                    alt="material ui"
-                    width={53}
-                    height={53}
-                  />
-                )}
-                {item.toLowerCase() === 'styled components' && (
-                  <Image
-                    src={StyledComponents}
-                    alt="styled components"
-                    width={53}
-                    height={53}
-                  />
-                )}
-                {item.toLowerCase() === 'javascript' && (
-                  <Image
-                    src={Javascript}
-                    alt="javascript"
-                    width={53}
-                    height={53}
-                  />
-                )}
-                {item.toLowerCase() === 'auth0' && (
-                  <SiAuth0 style={{color: '#DF5022'}}></SiAuth0>
-                )}
-                {item.toLowerCase() === 'nuxtjs' && (
-                  <Image src={Nuxtjs} alt="Nuxtjs" width={53} height={53} />
-                )}
-                {item.toLowerCase() === 'vuejs' && (
-                  <Image src={Vuejs} alt="Vuejs" width={53} height={53} />
-                )}
-                {item.toLowerCase() === 'nextjs' && (
-                  <TbBrandNextjs></TbBrandNextjs>
-                )}
-                {(item.toLowerCase() === 'redux' ||
-                  item.toLowerCase() === 'redux thunk' ||
-                  item.toLowerCase() === 'redux persist') && (
-                  <SiRedux style={{color: '#835EC3'}}></SiRedux>
-                )}
-              </div>
-              <p>{item}</p>
-            </div>
-          ))}
+        <div className={styles.header}>
+          <h1>Tools</h1>
+          <p>Project Equipments</p>
         </div>
-        <div className={styles.account}></div>
+        <div className={styles.contentItem}>
+          <div className={styles.tools}>
+            {data.tools.map((item, idx) => (
+              <div className={styles.toolItem} key={idx}>
+                <div>
+                  {item.toLowerCase() === 'html' && (
+                    <SiHtml5 style={{color: '#FF4B00'}}></SiHtml5>
+                  )}
+                  {item.toLowerCase() === 'scss/sass' && (
+                    <IoLogoSass style={{color: '#CD6699'}}></IoLogoSass>
+                  )}
+                  {item.toLowerCase() === 'css' && (
+                    <DiCss3 style={{color: '#2196F3'}}></DiCss3>
+                  )}
+                  {item.toLowerCase() === 'reactjs' && (
+                    <SiReact style={{color: '#00D1F2'}}></SiReact>
+                  )}
+                  {item.toLowerCase() === 'axios' && (
+                    <Image src={Axios} alt="axios" width={72} height={38} />
+                  )}
+                  {item.toLowerCase() === 'parceljs' && (
+                    <Image src={Parcel} alt="parceljs" width={65} height={49} />
+                  )}
+                  {item.toLowerCase() === 'material ui' && (
+                    <Image
+                      src={MaterialUI}
+                      alt="material ui"
+                      width={53}
+                      height={53}
+                    />
+                  )}
+                  {item.toLowerCase() === 'styled components' && (
+                    <Image
+                      src={StyledComponents}
+                      alt="styled components"
+                      width={53}
+                      height={53}
+                    />
+                  )}
+                  {item.toLowerCase() === 'javascript' && (
+                    <Image
+                      src={Javascript}
+                      alt="javascript"
+                      width={53}
+                      height={53}
+                    />
+                  )}
+                  {item.toLowerCase() === 'auth0' && (
+                    <SiAuth0 style={{color: '#DF5022'}}></SiAuth0>
+                  )}
+                  {item.toLowerCase() === 'nuxtjs' && (
+                    <Image src={Nuxtjs} alt="Nuxtjs" width={53} height={53} />
+                  )}
+                  {item.toLowerCase() === 'vuejs' && (
+                    <Image src={Vuejs} alt="Vuejs" width={53} height={53} />
+                  )}
+                  {item.toLowerCase() === 'nextjs' && (
+                    <TbBrandNextjs></TbBrandNextjs>
+                  )}
+                  {(item.toLowerCase() === 'redux' ||
+                    item.toLowerCase() === 'redux thunk' ||
+                    item.toLowerCase() === 'redux persist') && (
+                    <SiRedux style={{color: '#835EC3'}}></SiRedux>
+                  )}
+                </div>
+                <p>{item}</p>
+              </div>
+            ))}
+          </div>
+          <div className={styles.line}></div>
+          <div className={styles.accountContainer}>
+            {data.account.map((item, idx) => (
+              <div className={styles.account} key={idx}>
+                <h3>{item.title}</h3>
+                {item.email && (
+                  <div className={styles.accountItem}>
+                    <p>Email</p>
+                    <p>: {item.email}</p>
+                  </div>
+                )}
+                {item.user && (
+                  <div className={styles.accountItem}>
+                    <p>User</p>
+                    <p>: {item.user}</p>
+                  </div>
+                )}
+                <div className={styles.accountItem}>
+                  <p>Password</p>
+                  <p>: {item.password}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
