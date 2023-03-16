@@ -6,11 +6,11 @@ import {
   SiJavascript,
   SiHtml5,
   SiReact,
-  SiAxios,
   SiAuth0,
   SiRedux,
   SiNuxtdotjs,
 } from 'react-icons/si';
+// import {SiAxios} from 'react-icons/si'
 import {IoLogoSass} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
 import {TbBrandNextjs} from 'react-icons/tb';
@@ -77,9 +77,9 @@ export default function Detail({data}) {
                 {item.toLowerCase() === 'reactjs' && (
                   <SiReact style={{color: '#00D1F2'}}></SiReact>
                 )}
-                {item.toLowerCase() === 'axios' && (
+                {/* {item.toLowerCase() === 'axios' && (
                   <SiAxios style={{color: '#6222DD'}}></SiAxios>
-                )}
+                )} */}
                 {item.toLowerCase() === 'auth0' && (
                   <SiAuth0 style={{color: '#DF5022'}}></SiAuth0>
                 )}
