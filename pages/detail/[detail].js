@@ -1,10 +1,8 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {useRouter} from 'next/router';
-import Navbar from '@/components/Navbar/Navbar';
+import Navbar from '@/components/Detail-Navbar/Navbar';
 import styles from '../../styles/Home.module.css';
-import FixedNavbar from '@/components/FixedNavbar/FixedNavbar';
+import FixedNavbar from '@/components/Detail-FixedNavbar/FixedNavbar';
 import Footer from '@/components/Footer/Footer';
-import FixedButton from '@/components/FixedButton/FixedButton';
 import Head from 'next/head';
 import Image from 'next/image';
 import Rocket from '../../public/Assets/rocket.png';
@@ -34,10 +32,7 @@ export async function getStaticPaths() {
 }
 
 export default function Detail({data}) {
-  let router = useRouter();
   let [navbar, setNavbar] = useState(false);
-  let [button, setButton] = useState(false);
-  let {detail} = router.query;
 
   let checkScroll = useCallback(() => {
     let navbar = document.querySelector('#navbarContainer');
@@ -53,12 +48,6 @@ export default function Detail({data}) {
       setNavbar(true);
     } else {
       setNavbar(false);
-    }
-
-    if (height * -1 >= y) {
-      setButton(true);
-    } else {
-      setButton(false);
     }
 
     let speed =
@@ -84,7 +73,6 @@ export default function Detail({data}) {
       <Details data={data} />
       <Footer />
       {navbar && <FixedNavbar />}
-      {button && <FixedButton />}
       <div className={styles.background}></div>
       <div className={styles.rocket} id="rocket">
         <Image src={Rocket} alt="rocket" width={100} height={50}></Image>

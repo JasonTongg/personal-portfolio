@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  width: 70%;
+  margin-inline: auto;
+  gap: 2rem;
+  max-width: 1100px;
+}
+
+.container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.container p:hover svg {
+  transform: translateX(5px) rotate(45deg);
+}
+
+.container p svg {
+  font-size: 1.2rem;
+  transition: all 0.5s linear;
+}
+
+.navbarHeader {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.navbarItem {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarItem > * {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: var(--black);
+  animation-name: show;
+  animation-duration: 0.4s;
+  color: var(--black);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transition: all 0.2s linear;
+}
+
+.navbarItem > *:hover {
+  font-size: 1.2rem;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbarItem {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbarItem {
+    display: none;
+  }
+  .contact {
+    display: none !important;
+  }
+  .container {
+    justify-content: center;
+  }
+}

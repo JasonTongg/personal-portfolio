@@ -23,7 +23,7 @@ import Image from 'next/image';
 export default function Detail({data}) {
   return (
     <div className={styles.container}>
-      <div className={styles.hero}>
+      <div className={styles.hero} id="hero">
         <h2>
           {data.title}
           {data.title.toLowerCase() === 'pizzaria' && <CiPizza></CiPizza>}
@@ -95,7 +95,7 @@ export default function Detail({data}) {
           )}
         </div>
       </div>
-      <div className={styles.content}>
+      <div className={styles.content} id="tools">
         <div className={styles.header}>
           <h1>Tools</h1>
           <p>Project Equipments</p>
@@ -196,10 +196,12 @@ export default function Detail({data}) {
           </div>
         </div>
       </div>
-      <div
-        className={styles.parallax}
-        style={{backgroundImage: `url(${data.background})`}}
-      ></div>
+      {data.background && (
+        <div
+          className={styles.parallax}
+          style={{backgroundImage: `url(${data.background})`}}
+        ></div>
+      )}
     </div>
   );
 }

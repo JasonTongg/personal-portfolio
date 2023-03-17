@@ -1,0 +1,70 @@
+.container {
+  position: fixed !important;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 28px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  z-index: 100;
+  background-color: var(--125-01);
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 8px 24px var(--black-03);
+  transition: all 0.3s;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+}
+
+.container > * {
+  font-size: 25px;
+  color: var(--black-08);
+  cursor: pointer;
+  margin-block: 19px;
+}
+
+.container svg.active {
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 100px;
+  margin-block: 8px;
+  font-size: 2rem;
+  padding: 4px;
+}
+
+.container svg {
+  border-radius: 100px;
+  margin-block: 8px;
+  font-size: 2rem;
+  padding: 4px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px), translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px), translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+    row-gap: 0rem;
+  }
+
+  .container > * {
+    margin-block: 5px;
+  }
+}

@@ -5,7 +5,16 @@ import {TbChevronsUpRight} from 'react-icons/tb';
 export default function Navbar() {
   return (
     <div className={styles.container} id="navbarContainer">
-      <p className={styles.navbarHeader}>Jason</p>
+      <p
+        className={styles.navbarHeader}
+        onClick={() => {
+          document
+            .getElementById('navbarContainer')
+            .scrollIntoView({behavior: 'smooth', block: 'start'});
+        }}
+      >
+        Jason
+      </p>
       <ul className={styles.navbarItem}>
         <li
           onClick={() => {
