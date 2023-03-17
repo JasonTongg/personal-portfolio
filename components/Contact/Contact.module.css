@@ -43,6 +43,7 @@
   justify-content: flex-start;
   gap: 0.5rem;
   max-width: 350px;
+  margin-bottom: 4rem;
 }
 
 .contentItem svg {

@@ -157,6 +157,10 @@ export default function Detail({data}) {
           </div>
         </div>
       </div>
+      <div
+        className={styles.parallax}
+        style={{backgroundImage: `url(${data.background})`}}
+      ></div>
     </div>
   );
 }
