@@ -5,7 +5,7 @@ let data = [
     github: 'https://github.com/JasonTongg/youtube-clone',
     // image: 'image link / path',
     desc: 'J-Youtube is a video-sharing platform that allows users to view videos. Users can watch a variety of content on YouTube, including music videos, educational videos, vlogs, comedy sketches, and more. Overall, YouTube has revolutionized the way people consume video content, providing a platform for creative expression, entertainment, education, and more. ',
-    tools: ['NextJs', 'Redux', 'Axios'],
+    tools: ['NextJs', 'Redux', 'Axios', 'HTML', 'CSS'],
   },
   {
     title: 'J-Movie',
@@ -100,7 +100,7 @@ let data = [
     image:
       'https://i.pinimg.com/564x/dc/11/ed/dc11eda0dad951cf3dd6e3cbe727f5ba.jpg',
     desc: 'Jobster is an online platform that provides users to manage their job registration. User can add job to dashboard, delete job, edit job, filter job and also display job information detail. besides that, user can see their statistic about this month progress',
-    tools: ['ReactJS', 'Redux', 'Styled Components', 'Axios'],
+    tools: ['ReactJS', 'Redux', 'Styled Components', 'Axios', 'HTML'],
     account: [
       {
         title: 'Demo Account',
@@ -157,26 +157,6 @@ let data = [
     ],
   },
   {
-    title: 'Trillo',
-    demo: 'https://trillo-company-profile.vercel.app/',
-    github: 'https://github.com/JasonTongg/Trillo_Company_Profile',
-    image:
-      'https://i.pinimg.com/564x/70/cd/d1/70cdd1046755545ebfd15c88a8ef45b3.jpg',
-    desc: "Trillo is a website that provides information about Trillo, a fictional company that offers luxury accommodations and travel services. The website offers a sleek and modern design, highlighting Trillo's brand and services. Visitors can browse through various sections of the website, including services, amenities, locations, and pricing. The website also includes a section for customer reviews, showcasing positive feedback from satisfied customers. The user-friendly interface and engaging visuals make it easy for visitors to learn about Trillo's offerings and inspire them to book a luxury trip through the company.",
-    tools: ['HTML', 'SCSS/SASS'],
-    background: '/Assets/trillo.png',
-  },
-  {
-    title: 'Nexter',
-    demo: 'https://nexter-compro.netlify.app/',
-    github: 'https://github.com/JasonTongg/Nexter_Company_Profile',
-    image:
-      'https://i.pinimg.com/564x/56/df/b4/56dfb456de8f55253814d14bc6f68a68.jpg',
-    desc: "Nexter is a website that showcases a range of luxury properties for sale by Nexter, a fictional real estate company. The website offers an immersive experience for visitors with stunning visuals and a modern design that highlights Nexter's brand and properties. Visitors can browse through various sections of the website, including featured properties, property types, and locations. Each property is presented with high-quality photos, detailed descriptions, and pricing information. The website also includes a section for customer testimonials, highlighting positive feedback from satisfied clients. The user-friendly interface and engaging visuals make it easy for visitors to discover their dream property and contact Nexter to start the buying process.",
-    tools: ['HTML', 'SCSS/SASS'],
-    background: '/Assets/nexter.png',
-  },
-  {
     title: 'Traveling Compro',
     demo: 'https://traveling-company-profile.vercel.app/',
     github: 'https://github.com/JasonTongg/Traveling_Company_Profile',
@@ -195,6 +175,26 @@ let data = [
     desc: "This is a website that provides information about a fictional bank company. The website offers a clean and professional design, showcasing the bank's services, products, and features. Visitors can browse through various sections of the website, including accounts, loans, investments, and credit cards. Each section provides detailed information about the products and services offered by the bank, as well as the benefits of using them. The website also includes a section for customer testimonials, highlighting positive feedback from satisfied clients. The user-friendly interface and responsive design make it easy for visitors to navigate the website and find the information they need. The website is a valuable resource for anyone looking to learn more about the bank's offerings and is sure to inspire confidence in potential customers.",
     tools: ['HTML', 'CSS', 'Javascript'],
     background: '/Assets/bankist.png',
+  },
+  {
+    title: 'Trillo',
+    demo: 'https://trillo-company-profile.vercel.app/',
+    github: 'https://github.com/JasonTongg/Trillo_Company_Profile',
+    image:
+      'https://i.pinimg.com/564x/70/cd/d1/70cdd1046755545ebfd15c88a8ef45b3.jpg',
+    desc: "Trillo is a website that provides information about Trillo, a fictional company that offers luxury accommodations and travel services. The website offers a sleek and modern design, highlighting Trillo's brand and services. Visitors can browse through various sections of the website, including services, amenities, locations, and pricing. The website also includes a section for customer reviews, showcasing positive feedback from satisfied customers. The user-friendly interface and engaging visuals make it easy for visitors to learn about Trillo's offerings and inspire them to book a luxury trip through the company.",
+    tools: ['HTML', 'SCSS/SASS'],
+    background: '/Assets/trillo.png',
+  },
+  {
+    title: 'Nexter',
+    demo: 'https://nexter-compro.netlify.app/',
+    github: 'https://github.com/JasonTongg/Nexter_Company_Profile',
+    image:
+      'https://i.pinimg.com/564x/56/df/b4/56dfb456de8f55253814d14bc6f68a68.jpg',
+    desc: "Nexter is a website that showcases a range of luxury properties for sale by Nexter, a fictional real estate company. The website offers an immersive experience for visitors with stunning visuals and a modern design that highlights Nexter's brand and properties. Visitors can browse through various sections of the website, including featured properties, property types, and locations. Each property is presented with high-quality photos, detailed descriptions, and pricing information. The website also includes a section for customer testimonials, highlighting positive feedback from satisfied clients. The user-friendly interface and engaging visuals make it easy for visitors to discover their dream property and contact Nexter to start the buying process.",
+    tools: ['HTML', 'SCSS/SASS'],
+    background: '/Assets/nexter.png',
   },
 ];
 

@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './Detail.module.css';
-import {IoPaperPlaneOutline} from 'react-icons/io5';
 import Link from 'next/link';
 import {SiHtml5, SiReact, SiAuth0, SiRedux} from 'react-icons/si';
-import {IoLogoSass} from 'react-icons/io5';
+import {IoLogoSass, IoBicycleSharp, IoPaperPlaneOutline} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
-import {TbBrandNextjs} from 'react-icons/tb';
+import {TbBrandNextjs, TbSofa, TbCookie} from 'react-icons/tb';
+import {CiPizza} from 'react-icons/ci';
+import {RiMovie2Line, RiGithubLine, RiHotelLine} from 'react-icons/ri';
+import {AiOutlineCar, AiOutlineYoutube} from 'react-icons/ai';
+import {MdWorkOutline, MdOutlineLocalHotel} from 'react-icons/md';
+import {BsPiggyBank, BsAirplaneEngines, BsBank} from 'react-icons/bs';
 import Axios from '../../public/Assets/axios.png';
 import StyledComponents from '../../public/Assets/styled-components.png';
 import MaterialUI from '../../public/Assets/materialUI.png';
@@ -19,7 +23,41 @@ export default function Detail({data}) {
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
-        <h2>{data.title}</h2>
+        <h2>
+          {data.title}
+          {data.title.toLowerCase() === 'pizzaria' && <CiPizza></CiPizza>}
+          {data.title.toLowerCase() === 'j-movie' && (
+            <RiMovie2Line></RiMovie2Line>
+          )}
+          {data.title.toLowerCase() === 'binar rental car' && (
+            <AiOutlineCar></AiOutlineCar>
+          )}
+          {data.title.toLowerCase() === 'j-youtube' && (
+            <AiOutlineYoutube></AiOutlineYoutube>
+          )}
+          {data.title.toLowerCase() === 'comfy sloth' && <TbSofa></TbSofa>}
+          {data.title.toLowerCase() === 'github user' && (
+            <RiGithubLine></RiGithubLine>
+          )}
+          {data.title.toLowerCase() === 'jobster' && (
+            <MdWorkOutline></MdWorkOutline>
+          )}
+          {data.title.toLowerCase() === 'forkify' && <TbCookie></TbCookie>}
+          {data.title.toLowerCase() === 'workout mapty' && (
+            <IoBicycleSharp></IoBicycleSharp>
+          )}
+          {data.title.toLowerCase() === 'bank app' && (
+            <BsPiggyBank></BsPiggyBank>
+          )}
+          {data.title.toLowerCase() === 'traveling compro' && (
+            <BsAirplaneEngines></BsAirplaneEngines>
+          )}
+          {data.title.toLowerCase() === 'bankist' && <BsBank></BsBank>}
+          {data.title.toLowerCase() === 'trillo' && (
+            <MdOutlineLocalHotel></MdOutlineLocalHotel>
+          )}
+          {data.title.toLowerCase() === 'nexter' && <RiHotelLine></RiHotelLine>}
+        </h2>
         <p>{data.desc}</p>
         <div className={styles.buttons}>
           {data.demo && (
