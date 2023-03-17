@@ -9,7 +9,7 @@ import {CiPizza} from 'react-icons/ci';
 import {RiMovie2Line, RiGithubLine, RiHotelLine} from 'react-icons/ri';
 import {AiOutlineCar, AiOutlineYoutube} from 'react-icons/ai';
 import {MdWorkOutline, MdOutlineLocalHotel} from 'react-icons/md';
-import {BsPiggyBank, BsAirplaneEngines, BsBank} from 'react-icons/bs';
+import {BsPiggyBank, BsBank, BsAirplane} from 'react-icons/bs';
 import Axios from '../../public/Assets/axios.png';
 import StyledComponents from '../../public/Assets/styled-components.png';
 import MaterialUI from '../../public/Assets/materialUI.png';
@@ -50,7 +50,7 @@ export default function Detail({data}) {
             <BsPiggyBank></BsPiggyBank>
           )}
           {data.title.toLowerCase() === 'traveling compro' && (
-            <BsAirplaneEngines></BsAirplaneEngines>
+            <BsAirplane></BsAirplane>
           )}
           {data.title.toLowerCase() === 'bankist' && <BsBank></BsBank>}
           {data.title.toLowerCase() === 'trillo' && (
