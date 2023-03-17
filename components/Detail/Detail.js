@@ -4,12 +4,12 @@ import Link from 'next/link';
 import {SiHtml5, SiReact, SiAuth0, SiRedux} from 'react-icons/si';
 import {IoLogoSass, IoBicycleSharp, IoPaperPlaneOutline} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
-import {TbBrandNextjs, TbSofa, TbCookie} from 'react-icons/tb';
+import {TbBrandNextjs, TbSofa, TbCookie, TbPlaneTilt} from 'react-icons/tb';
 import {CiPizza} from 'react-icons/ci';
 import {RiMovie2Line, RiGithubLine, RiHotelLine} from 'react-icons/ri';
 import {AiOutlineCar, AiOutlineYoutube} from 'react-icons/ai';
 import {MdWorkOutline, MdOutlineLocalHotel} from 'react-icons/md';
-import {BsPiggyBank, BsBank, BsAirplane} from 'react-icons/bs';
+import {BsPiggyBank, BsBank} from 'react-icons/bs';
 import Axios from '../../public/Assets/axios.png';
 import StyledComponents from '../../public/Assets/styled-components.png';
 import MaterialUI from '../../public/Assets/materialUI.png';
@@ -50,7 +50,7 @@ export default function Detail({data}) {
             <BsPiggyBank></BsPiggyBank>
           )}
           {data.title.toLowerCase() === 'traveling compro' && (
-            <BsAirplane></BsAirplane>
+            <TbPlaneTilt></TbPlaneTilt>
           )}
           {data.title.toLowerCase() === 'bankist' && <BsBank></BsBank>}
           {data.title.toLowerCase() === 'trillo' && (
