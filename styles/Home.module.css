@@ -23,16 +23,20 @@
   z-index: 0;
 }
 
-.rocket {
+.rocketImage {
+  height: auto;
+  width: 75px;
   position: fixed;
-  /* top: 0%; */
   right: 0;
   transform: rotateX(180deg);
 }
 
-.rocket img {
+.cloud {
   height: auto;
   width: 75px;
+  position: fixed;
+  right: 0;
+  top: 50%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -42,7 +46,8 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .rocket {
+  .rocketImage,
+  .cloud {
     display: none;
   }
 }

@@ -6,7 +6,7 @@ import {BsArrowRightShort} from 'react-icons/bs';
 import Link from 'next/link';
 import Router from 'next/router';
 
-export default function Card({data, setModel, setModelIndex, idx}) {
+export default function Card({data}) {
   return (
     <div className={styles.container}>
       <Image

@@ -18,6 +18,7 @@ import {education, exp, organization} from '../Data/Experience';
 import portfolio from '../Data/Portfolio';
 import Image from 'next/image';
 import Rocket from '../public/Assets/rocket.png';
+import RocketCloud from '../public/Assets/cloud-5.png';
 
 export async function getStaticProps(context) {
   return {
@@ -54,6 +55,7 @@ export default function Index({
     let footerY = footer?.getBoundingClientRect().y;
     let windowHeight = window.innerHeight;
     let rocket = document.querySelector('#rocket');
+    let cloud = document.querySelector('#cloud');
     let scroll = window.scrollY;
 
     if (height * -1 >= y && footerY >= windowHeight - 100) {
@@ -73,8 +75,9 @@ export default function Index({
         (document.body?.getBoundingClientRect().height - window.innerHeight)) *
       100;
     rocket.style.top = `calc(${speed}% - ${
-      rocket.querySelector('img').getBoundingClientRect().height
+      rocket.getBoundingClientRect().height
     }px)`;
+    cloud.style.opacity = `${(speed / 100) * 2}`;
   }, []);
 
   useEffect(() => {
@@ -99,8 +102,23 @@ export default function Index({
       {navbar && <FixedNavbar />}
       {button && <FixedButton />}
       <div className={styles.background}></div>
-      <div className={styles.rocket} id="rocket">
-        <Image src={Rocket} alt="rocket" width={100} height={50}></Image>
+      <div className={styles.rocket}>
+        <Image
+          src={Rocket}
+          alt="rocket"
+          width={100}
+          height={50}
+          className={styles.rocketImage}
+          id="rocket"
+        ></Image>
+        <Image
+          src={RocketCloud}
+          alt="Cloud"
+          width={100}
+          height={80}
+          className={styles.cloud}
+          id="cloud"
+        ></Image>
       </div>
     </div>
   );
