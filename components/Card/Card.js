@@ -4,7 +4,6 @@ import tempPhoto from '../../public/Assets/temp-photo.png';
 import Image from 'next/image';
 import {BsArrowRightShort} from 'react-icons/bs';
 import Link from 'next/link';
-import Router from 'next/router';
 
 export default function Card({data}) {
   return (

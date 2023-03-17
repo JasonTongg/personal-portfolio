@@ -20,7 +20,7 @@ import Image from 'next/image';
 import Rocket from '../public/Assets/rocket.png';
 import RocketCloud from '../public/Assets/cloud-5.png';
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       skills: {
