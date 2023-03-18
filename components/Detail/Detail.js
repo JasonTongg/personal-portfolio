@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {SiHtml5, SiReact, SiAuth0, SiRedux} from 'react-icons/si';
 import {IoLogoSass, IoBicycleSharp, IoPaperPlaneOutline} from 'react-icons/io5';
 import {DiCss3} from 'react-icons/di';
-import {TbBrandNextjs, TbSofa, TbCookie} from 'react-icons/tb';
+import {TbBrandNextjs, TbSofa, TbCookie, TbShoe} from 'react-icons/tb';
 import {CiPizza} from 'react-icons/ci';
 import {RiMovie2Line, RiGithubLine, RiHotelLine} from 'react-icons/ri';
 import {AiOutlineCar, AiOutlineYoutube} from 'react-icons/ai';
@@ -58,6 +58,7 @@ export default function Detail({data}) {
             <MdOutlineLocalHotel></MdOutlineLocalHotel>
           )}
           {data.title.toLowerCase() === 'nexter' && <RiHotelLine></RiHotelLine>}
+          {data.title.toLowerCase() === 'j-shoe' && <TbShoe></TbShoe>}
         </h2>
         <p>{data.desc}</p>
         <div className={styles.buttons}>
@@ -153,9 +154,10 @@ export default function Detail({data}) {
                   {item.toLowerCase() === 'nuxtjs' && (
                     <Image src={Nuxtjs} alt="Nuxtjs" width={53} height={53} />
                   )}
-                  {item.toLowerCase() === 'vuejs' && (
-                    <Image src={Vuejs} alt="Vuejs" width={53} height={53} />
-                  )}
+                  {item.toLowerCase() === 'vuejs' ||
+                    (item.toLowerCase() === 'vuex' && (
+                      <Image src={Vuejs} alt="Vuejs" width={53} height={53} />
+                    ))}
                   {item.toLowerCase() === 'nextjs' && (
                     <TbBrandNextjs></TbBrandNextjs>
                   )}
