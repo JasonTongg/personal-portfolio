@@ -16,6 +16,22 @@ let data = [
     type: ['Framework'],
   },
   {
+    company: 'Udemy',
+    title: 'Complete Next.js Developer in 2023',
+    image: '../../public/Assets/udemy.png',
+    credentials:
+      'https://www.udemy.com/certificate/UC-7cbeb5d2-02f3-4ee6-9dc0-d09bee23860a/',
+    type: ['Framework'],
+  },
+  {
+    company: 'Udemy',
+    title: 'The Complete Full-Stack JavaScript Course',
+    image: '../../public/Assets/udemy.png',
+    credentials:
+      'https://www.udemy.com/certificate/UC-bc2e5820-f92d-4220-858e-75be7bc644c3/',
+    type: ['Framework'],
+  },
+  {
     company: 'Binar Academy',
     title: 'The Most Progressive Student',
     image: '',
