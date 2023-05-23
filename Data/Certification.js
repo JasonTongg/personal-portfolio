@@ -49,6 +49,14 @@ let data = [
   },
   {
     company: 'Harisenin.com',
+    title: 'Front-end Development Bootcamp',
+    image: '',
+    certificate:
+      'https://drive.google.com/drive/folders/1ZYkk69v-nsW_GZzMmwjYvmtVwcGHW4YK',
+    type: ['Bootcamp'],
+  },
+  {
+    company: 'Timedoor Academy',
     title: 'Full Stack Web Developer Bootcamp',
     image: '',
     certificate:

@@ -22,8 +22,7 @@ let data = [
   {
     title: 'Binar Rental Car',
     demo: 'https://binar-rentalcar.netlify.app/',
-    github:
-      'https://i.pinimg.com/originals/f6/d9/9f/f6d99f036e8b7642731d936dcf4f3692.png',
+    github: 'https://github.com/JasonTongg/BinarProject-RentalCar',
     image:
       'https://i.pinimg.com/564x/f6/d9/9f/f6d99f036e8b7642731d936dcf4f3692.jpg',
     desc: 'Binar car rental is an online platform that enables users to rent a car for a specified period of time. These websites typically offer a wide range of vehicles to choose from, including cars, SUVs, trucks, and vans. Users can browse through available vehicles, select the dates and times they wish to rent the car. Overall, binar rental car provides a convenient and flexible option for individuals or businesses in need of a vehicle for a temporary period, whether it be for a weekend road trip or a month-long business trip.',
@@ -115,8 +114,7 @@ let data = [
   },
   {
     title: 'Forkify',
-    github:
-      'https://i.pinimg.com/originals/a6/2e/20/a62e2000cb61a661fda43d3f6b72dff5.png',
+    github: 'https://github.com/JasonTongg/Recipe-Documentation-Website',
     image:
       'https://i.pinimg.com/564x/a6/2e/20/a62e2000cb61a661fda43d3f6b72dff5.jpg',
     desc: 'Forkify is an online platform that provides a collection of recipes for various types of food and cuisines. These websites typically display the required ingredients to help visitors choose the best recipes to suit their needs. Visitors can browse the website to find new recipe ideas, save their favorite recipes, and create their own recipe and save in forkify website.',

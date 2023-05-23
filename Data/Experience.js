@@ -46,9 +46,9 @@ export let exp = [
     date: 'Feb 2022 - Jul 2022',
   },
   {
-    degree: 'Activist',
-    location: 'Bina Nusantara Computer Club',
-    date: 'Apl 2022 - Jun 2022',
+    degree: 'Assistant Mentor (Fullstack Web Developer)',
+    location: 'Harisenin.com',
+    date: 'Apr 2022 - Jun 2022',
   },
   {
     degree: 'Java Programming Instructor',
