@@ -49,18 +49,18 @@ let data = [
   },
   {
     company: 'Harisenin.com',
-    title: 'Front-end Development Bootcamp',
-    image: '',
-    certificate:
-      'https://drive.google.com/drive/folders/1ZYkk69v-nsW_GZzMmwjYvmtVwcGHW4YK',
-    type: ['Bootcamp'],
-  },
-  {
-    company: 'Timedoor Academy',
     title: 'Full Stack Web Developer Bootcamp',
     image: '',
     certificate:
       'https://drive.google.com/file/d/1KLnsh9Z__le6UfpI4cxPBcnXVgYUq-yi/view?usp=sharing',
+    type: ['Bootcamp'],
+  },
+  {
+    company: 'Timedoor Academy',
+    title: 'Front-end Development Bootcamp',
+    image: '',
+    certificate:
+      'https://drive.google.com/drive/folders/1ZYkk69v-nsW_GZzMmwjYvmtVwcGHW4YK',
     type: ['Bootcamp'],
   },
   {
