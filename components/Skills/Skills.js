@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import styles from './Skills.module.css';
 import {BsCodeSlash, BsFillPatchCheckFill} from 'react-icons/bs';
 import {CgWebsite} from 'react-icons/cg';
+import ModeToggle from '../ModeToggle/ModeToggle';
 
-export default function Skills({data}) {
+export default function Skills({data, mode, setMode}) {
   let {frontEndSkills, otherSkill} = data;
+  let isWeb3 = mode === 'web3';
   let [skill, setSkill] = useState(true);
   let [active, setActive] = useState(0);
 
@@ -14,6 +16,7 @@ export default function Skills({data}) {
         <h2>Skills</h2>
         <p>My Technical Level</p>
       </div>
+      <ModeToggle mode={mode} setMode={setMode}></ModeToggle>
       <div className={styles.buttons}>
         <div
           className={`${styles.button} ${active === 0 && styles.active}`}
@@ -23,7 +26,7 @@ export default function Skills({data}) {
           }}
         >
           <CgWebsite></CgWebsite>
-          <h3>Front-end</h3>
+          <h3>{isWeb3 ? 'Web3 Dev' : 'Front-end'}</h3>
         </div>
         <div
           className={`${styles.button} ${active === 1 && styles.active}`}
@@ -33,12 +36,12 @@ export default function Skills({data}) {
           }}
         >
           <BsCodeSlash></BsCodeSlash>
-          <h3>Others</h3>
+          <h3>{isWeb3 ? 'Blockchain' : 'Others'}</h3>
         </div>
       </div>
       {skill === true && (
         <div className={styles.content}>
-          <h2>Front-end Developer</h2>
+          <h2>{isWeb3 ? 'Web3 Developer' : 'Front-end Developer'}</h2>
           <div className={styles.skillContainer}>
             {frontEndSkills.map((item, idx) => (
               <div className={styles.skill} key={idx}>
@@ -54,7 +57,7 @@ export default function Skills({data}) {
       )}
       {skill === false && (
         <div className={styles.contents}>
-          <h2>Other Programming Skills</h2>
+          <h2>{isWeb3 ? 'Blockchain Concepts' : 'Other Programming Skills'}</h2>
           <div className={styles.skillContainer}>
             {otherSkill.map((item, idx) => (
               <div className={styles.skill} key={idx}>

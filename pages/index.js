@@ -12,10 +12,21 @@ import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import FixedButton from '@/components/FixedButton/FixedButton';
 import Head from 'next/head';
-import {frontEndSkills, otherSkill} from '../Data/Skills';
-import CertificationData from '../Data/Certification';
-import {education, exp, organization} from '../Data/Experience';
-import portfolio from '../Data/Portfolio';
+import {
+  frontEndSkills,
+  otherSkill,
+  web3FrontEndSkills,
+  web3OtherSkill,
+} from '../Data/Skills';
+import CertificationData, {web3Data as web3CertificationData} from '../Data/Certification';
+import {
+  education,
+  exp,
+  organization,
+  web3Education,
+  web3Exp,
+} from '../Data/Experience';
+import portfolio, {web3Portfolio} from '../Data/Portfolio';
 import Image from 'next/image';
 import Rocket from '../public/Assets/rocket.png';
 import RocketCloud from '../public/Assets/cloud-5.png';
@@ -26,14 +37,20 @@ export async function getStaticProps() {
       skills: {
         frontEndSkills,
         otherSkill,
+        web3FrontEndSkills,
+        web3OtherSkill,
       },
       Certification: CertificationData,
+      web3Certification: web3CertificationData,
       experience: {
         education,
         exp,
         organization,
+        web3Education,
+        web3Exp,
       },
       portfolio,
+      web3Portfolio,
     },
   };
 }
@@ -41,11 +58,38 @@ export async function getStaticProps() {
 export default function Index({
   skills,
   Certification: certifications,
+  web3Certification,
   experience,
   portfolio,
+  web3Portfolio,
 }) {
   let [navbar, setNavbar] = useState(false);
   let [button, setButton] = useState(false);
+  let [mode, setMode] = useState('web3');
+
+  let activeSkills =
+    mode === 'web3'
+      ? {
+          frontEndSkills: skills.web3FrontEndSkills,
+          otherSkill: skills.web3OtherSkill,
+        }
+      : {frontEndSkills: skills.frontEndSkills, otherSkill: skills.otherSkill};
+
+  let activeExperience =
+    mode === 'web3'
+      ? {
+          education: experience.web3Education,
+          exp: experience.web3Exp,
+        }
+      : {
+          education: experience.education,
+          exp: experience.exp,
+          organization: experience.organization,
+        };
+
+  let activePortfolio = mode === 'web3' ? web3Portfolio : portfolio;
+
+  let activeCertification = mode === 'web3' ? web3Certification : certifications;
 
   let checkScroll = useCallback(() => {
     let navbar = document.querySelector('#navbarContainer');
@@ -93,10 +137,10 @@ export default function Index({
       <Navbar />
       <Hero />
       <About />
-      <Skills data={skills} />
-      <Experience data={experience} />
-      <Portfolio data={portfolio} />
-      <Certification data={certifications} />
+      <Skills data={activeSkills} mode={mode} setMode={setMode} />
+      <Experience data={activeExperience} mode={mode} />
+      <Portfolio data={activePortfolio} />
+      <Certification data={activeCertification} />
       <Contact />
       <Footer />
       {navbar && <FixedNavbar />}

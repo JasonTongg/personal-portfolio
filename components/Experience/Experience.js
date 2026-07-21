@@ -1,12 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './Experience.module.css';
 import {MdOutlineSchool, MdOutlineWorkOutline} from 'react-icons/md';
 import {VscOrganization} from 'react-icons/vsc';
 import {IoCalendarOutline} from 'react-icons/io5';
 
-export default function Experience({data}) {
+export default function Experience({data, mode}) {
   let {education, exp, organization} = data;
-  let [experience, setExperience] = useState(education);
+  let showOrganization = mode !== 'web3';
+  let [activeTab, setActiveTab] = useState('education');
+
+  useEffect(() => {
+    if (!showOrganization && activeTab === 'organization') {
+      setActiveTab('education');
+    }
+  }, [showOrganization, activeTab]);
+
+  let experience = {education, organization, exp}[activeTab] ?? education;
   return (
     <div className={styles.container} id="experience">
       <div className={styles.header}>
@@ -16,30 +25,34 @@ export default function Experience({data}) {
       <div className={styles.buttons}>
         <div
           className={`${styles.button} ${
-            experience === education && styles.active
+            activeTab === 'education' && styles.active
           }`}
           onClick={() => {
-            setExperience(education);
+            setActiveTab('education');
           }}
         >
           <MdOutlineSchool></MdOutlineSchool>
           <h3>Education</h3>
         </div>
+        {showOrganization && (
+          <div
+            className={`${styles.button} ${
+              activeTab === 'organization' && styles.active
+            }`}
+            onClick={() => {
+              setActiveTab('organization');
+            }}
+          >
+            <VscOrganization></VscOrganization>
+            <h3>Organization</h3>
+          </div>
+        )}
         <div
           className={`${styles.button} ${
-            experience === organization && styles.active
+            activeTab === 'exp' && styles.active
           }`}
           onClick={() => {
-            setExperience(organization);
-          }}
-        >
-          <VscOrganization></VscOrganization>
-          <h3>Organization</h3>
-        </div>
-        <div
-          className={`${styles.button} ${experience === exp && styles.active}`}
-          onClick={() => {
-            setExperience(exp);
+            setActiveTab('exp');
           }}
         >
           <MdOutlineWorkOutline></MdOutlineWorkOutline>

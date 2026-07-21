@@ -61,3 +61,30 @@ export let exp = [
     date: 'Sep 2020 - Feb 2021',
   },
 ];
+
+// Web3 experience
+export let web3Education = [
+  {
+    degree: 'Blockchain Developer, Blockchain',
+    location: 'PBA Labs',
+    date: 'Jan 2025 - Apr 2025',
+  },
+];
+
+export let web3Exp = [
+  {
+    degree: 'Blockchain Developer',
+    location: 'HeLa Labs',
+    date: 'May 2025 - Present',
+  },
+  {
+    degree: 'Blockchain Developer',
+    location: 'Snap Innovations Pte Ltd',
+    date: 'May 2025 - Present',
+  },
+  {
+    degree: 'Web3 Frontend Developer',
+    location: 'Adatama Teknologi Indonesia',
+    date: 'Mar 2024 - May 2025',
+  },
+];

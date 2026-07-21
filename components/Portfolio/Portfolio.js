@@ -5,9 +5,12 @@ import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md';
 
 export default function Portfolio({data}) {
   let [limit, setLimit] = useState(6);
+  let [collapsedLimit, setCollapsedLimit] = useState(6);
 
   useEffect(() => {
-    setLimit(window.innerWidth <= 640 ? 3 : 6);
+    let value = window.innerWidth <= 640 ? 3 : 6;
+    setLimit(value);
+    setCollapsedLimit(value);
   }, []);
 
   return (
@@ -21,16 +24,16 @@ export default function Portfolio({data}) {
           <Card key={idx} data={item}></Card>
         ))}
       </div>
-      {limit !== 100 && (
+      {limit !== 100 && data.length > limit && (
         <button className={styles.button} onClick={() => setLimit(100)}>
           Show More
           <MdKeyboardArrowDown></MdKeyboardArrowDown>
         </button>
       )}
-      {limit === 100 && (
+      {limit === 100 && data.length > collapsedLimit && (
         <button
           className={styles.button}
-          onClick={() => setLimit(window.innerWidth <= 640 ? 3 : 6)}
+          onClick={() => setLimit(collapsedLimit)}
         >
           Less
           <MdKeyboardArrowUp></MdKeyboardArrowUp>

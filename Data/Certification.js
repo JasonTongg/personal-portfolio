@@ -195,3 +195,49 @@ let data = [
 ];
 
 export default data;
+
+// Dummy data - Web3 certifications
+export let web3Data = [
+  {
+    company: 'Alchemy University',
+    title: 'Ethereum Developer Bootcamp',
+    image: '',
+    certificate: '#',
+    type: ['Bootcamp'],
+  },
+  {
+    company: 'Cyfrin Updraft',
+    title: 'Smart Contract Security',
+    image: '',
+    certificate: '#',
+    type: ['Framework'],
+  },
+  {
+    company: 'ETHGlobal',
+    title: 'Hackathon Finalist - DeFi Track',
+    image: '',
+    certificate: '#',
+    type: ['Awards'],
+  },
+  {
+    company: 'Udemy',
+    title: 'Solidity, Blockchain, and Smart Contract Course',
+    image: '../../public/Assets/udemy.png',
+    credentials: '#',
+    type: ['Framework'],
+  },
+  {
+    company: 'Udemy',
+    title: 'Hardhat and Ethers.js for Smart Contract Development',
+    image: '../../public/Assets/udemy.png',
+    credentials: '#',
+    type: ['Framework'],
+  },
+  {
+    company: 'Dicoding',
+    title: 'Belajar Dasar Pengembangan Blockchain',
+    image: '',
+    credentials: '#',
+    type: ['Basic Web'],
+  },
+];

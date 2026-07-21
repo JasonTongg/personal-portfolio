@@ -211,3 +211,39 @@ let data = [
 ];
 
 export default data;
+
+// Dummy data - Web3 portfolio
+export let web3Portfolio = [
+  {
+    title: 'NFT Marketplace',
+    demo: '#',
+    github: '#',
+    desc: 'A decentralized marketplace concept for minting, buying, and selling NFTs. Users can connect their wallet, mint ERC-721 tokens, list items for sale, and browse a gallery of collections. All listings and transfers are handled on-chain through smart contracts, with metadata pinned to IPFS for decentralized storage.',
+    tools: ['Solidity', 'Hardhat', 'ReactJS', 'Ethers.js', 'IPFS'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'DeFi Staking Dashboard',
+    demo: '#',
+    github: '#',
+    desc: 'A dashboard concept for staking ERC-20 tokens and tracking rewards in real time. Users can deposit tokens into a staking pool, view APY, claim rewards, and unstake at any time. The dashboard reads on-chain data directly from the smart contract to display live balances and reward accrual.',
+    tools: ['Solidity', 'Web3.js', 'ReactJS', 'The Graph'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'DAO Voting App',
+    demo: '#',
+    github: '#',
+    desc: 'A governance concept that lets token holders create proposals and vote on them based on their token balance. Proposals move through discussion, voting, and execution stages, with results tallied on-chain to ensure transparency and tamper-proof outcomes.',
+    tools: ['Solidity', 'Hardhat', 'Ethers.js', 'ReactJS'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'Token Launchpad',
+    demo: '#',
+    github: '#',
+    desc: 'A launchpad concept for deploying custom ERC-20 tokens without writing code. Users configure token name, symbol, and supply, then deploy directly from the UI. The platform also supports simple vesting schedules for team and investor allocations.',
+    tools: ['Solidity', 'Foundry', 'ReactJS', 'MetaMask'],
+    background: '/Assets/temp-photo.png',
+  },
+];

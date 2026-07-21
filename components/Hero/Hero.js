@@ -100,6 +100,10 @@ export default function Hero() {
             <div className={styles.line}></div>
             <TypeAnimation
               sequence={[
+                'Blockchain Developer',
+                1000,
+                'Smart Contract Engineer',
+                1000,
                 'Front-end Developer',
                 1000,
                 'Web Developer',
@@ -114,11 +118,14 @@ export default function Hero() {
           </div>
           <p className={styles.contentP}>
             I{"'"}m active Binus University student in Jakarta. I{"'"}m very
-            passion in frontend development and dedicated to creating visually
-            appealing and user-friendly websites and applications. I{"'"}m
-            skilled in languages such as ReactJS, and NextJS, and are constantly
-            seeking new ways to improve my skills and stay up-to-date with the
-            latest technologies.
+            passion in blockchain development and dedicated to building
+            secure, decentralized applications and smart contracts, as well as
+            creating visually appealing and user-friendly websites and
+            applications. I{"'"}m skilled in languages and tools such as
+            Solidity, Foundry, Hardhat, and Rust for Web3, along with ReactJS
+            and NextJS, and are constantly seeking new ways to improve my
+            skills and stay up-to-date with the latest web3 and web2
+            technologies.
           </p>
           <Link
             href="https://www.linkedin.com/in/jason-tong-42600319a/"

@@ -15,6 +15,7 @@ export default function About() {
       'example.pdf'
     );
   };
+
   return (
     <div className={styles.container} id="about">
       <div className={styles.header}>
@@ -36,24 +37,27 @@ export default function About() {
             <div className={styles.contentItem}>
               <RiMedalLine></RiMedalLine>
               <h3>Experience</h3>
-              <p>1 + Year</p>
+              <p>3 + Years</p>
             </div>
             <div className={styles.contentItem}>
               <GiSpellBook></GiSpellBook>
               <h3>Learning</h3>
-              <p>3 + Years</p>
+              <p>5 + Years</p>
             </div>
             <div className={styles.contentItem}>
               <AiOutlineFileDone></AiOutlineFileDone>
               <h3>Completed</h3>
-              <p>15 + Projects</p>
+              <p>20 + Projects</p>
             </div>
           </div>
           <p>
-            Frontend developer, i create web pages with UI/UX user interface. I
-            have years of experience in creating websites and join several
-            bootcamp for self improvement, such as: Binar Academy, Timedoor
-            Academy and many more...
+            Blockchain developer with web2 experience too, i build
+            decentralized applications and smart contracts as well as create
+            web pages with UI/UX user interface. I have hands-on experience
+            with Solidity, Foundry, Hardhat, Rust, and other Web3 tooling,
+            along with ReactJS and NextJS, and join several hackathon and
+            bootcamp for self improvement, such as: ETHGlobal, Binar Academy,
+            Timedoor Academy and many more...
           </p>
           <a onClick={saveFile} className={styles.button}>
             <p>Download CV</p>

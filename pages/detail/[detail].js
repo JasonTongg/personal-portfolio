@@ -7,13 +7,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Rocket from '../../public/Assets/rocket.png';
 import Details from '@/components/Detail/Detail';
-import portfolioData from '../../Data/Portfolio';
+import portfolioData, {web3Portfolio} from '../../Data/Portfolio';
 import RocketCloud from '../../public/Assets/cloud-5.png';
+
+let allPortfolioData = [...portfolioData, ...web3Portfolio];
 
 export async function getStaticProps(context) {
   return {
     props: {
-      data: portfolioData.filter(
+      data: allPortfolioData.filter(
         (item) => item.title === context.params.detail
       )[0],
     },
@@ -21,7 +23,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  let param = portfolioData.map((item) => ({
+  let param = allPortfolioData.map((item) => ({
     params: {
       detail: item.title,
     },
