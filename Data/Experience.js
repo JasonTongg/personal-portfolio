@@ -41,9 +41,14 @@ export let organization = [
 
 export let exp = [
   {
-    degree: 'Mentor Ambassador',
-    location: 'Binus Student Learning Community',
-    date: 'Feb 2022 - Jul 2022',
+    degree: 'Coding Instructor',
+    location: 'Timedoor Academy',
+    date: 'Feb 2023 - Nov 2024',
+  },
+  {
+    degree: 'Frontend Developer',
+    location: 'Suitmedia Digital Agency',
+    date: 'Sep 2023 - Feb 2024',
   },
   {
     degree: 'Assistant Mentor (Fullstack Web Developer)',
@@ -55,10 +60,48 @@ export let exp = [
     location: 'Bina Nusantara Computer Club',
     date: 'Jan 2021 - May 2021',
   },
+];
+
+export let volunteer = [
   {
-    degree: 'Scholarship Mentor',
-    location: 'Binus Student Learning Community',
-    date: 'Sep 2020 - Feb 2021',
+    degree: 'Sponsor Coordinator (Integrated Days)',
+    location: 'Hands on Business',
+    date: 'Aug 2021 - Oct 2021',
+  },
+  {
+    degree: 'Chairman Committee (TechnoScape 2021)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'Dec 2020 - Jul 2021',
+  },
+  {
+    degree: 'Sponsorship Coordinator (BNCC Techno Talk II)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'May 2020 - Jun 2020',
+  },
+  {
+    degree: 'Sponsorship Coordinator (BNCC Techno Talk I)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'Oct 2020 - Dec 2020',
+  },
+  {
+    degree: 'Event Staff (TechnoScape 2020)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'Jan 2020 - Oct 2020',
+  },
+  {
+    degree: 'Sponsorship Staff (BNCC Opening Season)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'Jul 2020 - Sep 2020',
+  },
+  {
+    degree: 'Committee (BNCC CSR)',
+    location: 'Bina Nusantara Computer Club',
+    date: 'Sep 2020 - Oct 2020',
+  },
+  {
+    degree: 'P2M Coding Class Speaker',
+    location: 'HIMMAT Binus University',
+    date: 'Mar 2022',
   },
 ];
 

@@ -88,77 +88,89 @@ export let otherSkill = [
 export let web3FrontEndSkills = [
   {
     skill: 'Solidity',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'Rust',
-    level: 'Basic',
+    level: 'Intermediate',
   },
   {
     skill: 'Foundry',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'Hardhat',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'Anchor',
-    level: 'Basic',
+    level: 'Intermediate',
   },
   {
     skill: 'Solana',
-    level: 'Basic',
+    level: 'Intermediate',
   },
   {
     skill: 'Web3.js',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'Ethers.js',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'Viem',
-    level: 'Basic',
+    level: 'Advanced',
   },
   {
     skill: 'Wagmi',
-    level: 'Basic',
+    level: 'Advanced',
   },
   {
     skill: 'WalletConnect',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
     skill: 'RainbowKit',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
 ];
 
 export let web3OtherSkill = [
   {
     skill: 'Smart Contracts',
-    level: 'Intermediate',
+    level: 'Advanced',
   },
   {
-    skill: 'ERC-20 / ERC-721',
-    level: 'Intermediate',
+    skill: 'ERC-20 / SPL Token',
+    level: 'Advanced',
+  },
+  {
+    skill: 'NFT',
+    level: 'Advanced',
   },
   {
     skill: 'DeFi Protocols',
-    level: 'Basic',
-  },
-  {
-    skill: 'MetaMask Integration',
     level: 'Intermediate',
   },
   {
-    skill: 'The Graph',
-    level: 'Basic',
+    skill: 'MetaMask Integration',
+    level: 'Advanced',
+  },
+  {
+    skill: 'Cross Chain',
+    level: 'Intermediate',
   },
   {
     skill: 'IPFS',
-    level: 'Basic',
+    level: 'Advanced',
+  },
+  {
+    skill: 'Decentralized Exchange',
+    level: 'Intermediate',
+  },
+  {
+    skill: 'Multi-Sig Wallet',
+    level: 'Intermediate',
   },
 ];

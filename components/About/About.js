@@ -52,12 +52,12 @@ export default function About() {
           </div>
           <p>
             Blockchain developer with web2 experience too, i build
-            decentralized applications and smart contracts as well as create
-            web pages with UI/UX user interface. I have hands-on experience
-            with Solidity, Foundry, Hardhat, Rust, and other Web3 tooling,
-            along with ReactJS and NextJS, and join several hackathon and
-            bootcamp for self improvement, such as: ETHGlobal, Binar Academy,
-            Timedoor Academy and many more...
+            decentralized applications and smart contracts on both EVM chains
+            and Solana, as well as create web pages with UI/UX user interface.
+            I have hands-on experience with Solidity, Foundry, Hardhat, Rust,
+            and other Web3 tooling, along with ReactJS and NextJS, and join
+            several bootcamp for self improvement, such as: PBA Labs, Binar
+            Academy, Timedoor Academy and many more...
           </p>
           <a onClick={saveFile} className={styles.button}>
             <p>Download CV</p>

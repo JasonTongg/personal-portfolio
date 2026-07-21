@@ -23,6 +23,7 @@ import {
   education,
   exp,
   organization,
+  volunteer,
   web3Education,
   web3Exp,
 } from '../Data/Experience';
@@ -46,6 +47,7 @@ export async function getStaticProps() {
         education,
         exp,
         organization,
+        volunteer,
         web3Education,
         web3Exp,
       },
@@ -75,19 +77,14 @@ export default function Index({
         }
       : {frontEndSkills: skills.frontEndSkills, otherSkill: skills.otherSkill};
 
-  let activeExperience =
-    mode === 'web3'
-      ? {
-          education: experience.web3Education,
-          exp: experience.web3Exp,
-        }
-      : {
-          education: experience.education,
-          exp: experience.exp,
-          organization: experience.organization,
-        };
+  let combinedExperience = {
+    education: [...experience.web3Education, ...experience.education],
+    exp: [...experience.web3Exp, ...experience.exp],
+    organization: experience.organization,
+    volunteer: experience.volunteer,
+  };
 
-  let activePortfolio = mode === 'web3' ? web3Portfolio : portfolio;
+  let combinedPortfolio = [...web3Portfolio, ...portfolio];
 
   let activeCertification = mode === 'web3' ? web3Certification : certifications;
 
@@ -138,8 +135,8 @@ export default function Index({
       <Hero />
       <About />
       <Skills data={activeSkills} mode={mode} setMode={setMode} />
-      <Experience data={activeExperience} mode={mode} />
-      <Portfolio data={activePortfolio} />
+      <Experience data={combinedExperience} />
+      <Portfolio data={combinedPortfolio} />
       <Certification data={activeCertification} />
       <Contact />
       <Footer />
