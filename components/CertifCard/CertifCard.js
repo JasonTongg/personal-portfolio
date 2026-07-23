@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CertifCard.module.css';
 import tempPhoto from '../../public/Assets/temp-photo.png';
 import Image from 'next/image';
-import {BsArrowRightShort} from 'react-icons/bs';
+import { BsArrowRightShort } from 'react-icons/bs';
 import Link from 'next/link';
 import Udemy from '../../public/Assets/udemy.png';
 import FreeCodeCamp from '../../public/Assets/FreeCodeCamp.png';
@@ -16,8 +16,10 @@ import progate from '../../public/Assets/progate.png';
 import bncclnt from '../../public/Assets/bncclnt.png';
 import bncctiket from '../../public/Assets/bncctiket.png';
 import anakteknik from '../../public/Assets/anakteknik.png';
+import cyfrin from '../../public/Assets/cyfrin.png';
+import pba from '../../public/Assets/pba.png';
 
-export default function CertifCard({data, small, data2}) {
+export default function CertifCard({ data, small, data2 }) {
   let image;
   if (data.company === 'Udemy') {
     image = Udemy;
@@ -43,14 +45,17 @@ export default function CertifCard({data, small, data2}) {
     image = bncctiket;
   } else if (data.company === 'Anak Teknik Indonesia') {
     image = anakteknik;
+  } else if (data.company === 'Cyfrin Updraft') {
+    image = cyfrin;
+  } else if (data.company === 'PBA Labs') {
+    image = pba;
   } else {
     image = tempPhoto;
   }
   return (
     <div
-      className={`${styles.container} ${styles.showAnimation} ${
-        data2?.length ? styles.maxWidth : ''
-      }`}
+      className={`${styles.container} ${styles.showAnimation} ${data2?.length ? styles.maxWidth : ''
+        }`}
     >
       <Image
         src={image}
@@ -60,8 +65,8 @@ export default function CertifCard({data, small, data2}) {
         quality={100}
         style={
           image === FreeCodeCamp || image === Harisenin
-            ? {marginTop: '.5rem', height: '18px'}
-            : {marginTop: '.5rem'}
+            ? { marginTop: '.5rem', height: '18px' }
+            : { marginTop: '.5rem' }
         }
       ></Image>
       <p>{data.title}</p>

@@ -86,7 +86,7 @@ export default function Index({
 
   let combinedPortfolio = [...web3Portfolio, ...portfolio];
 
-  let activeCertification = mode === 'web3' ? web3Certification : certifications;
+  let combinedCertification = [...web3Certification, ...certifications];
 
   let checkScroll = useCallback(() => {
     let navbar = document.querySelector('#navbarContainer');
@@ -137,7 +137,7 @@ export default function Index({
       <Skills data={activeSkills} mode={mode} setMode={setMode} />
       <Experience data={combinedExperience} />
       <Portfolio data={combinedPortfolio} />
-      <Certification data={activeCertification} />
+      <Certification data={combinedCertification} />
       <Contact />
       <Footer />
       {navbar && <FixedNavbar />}

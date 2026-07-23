@@ -74,26 +74,18 @@ export default function Detail({data}) {
               <IoPaperPlaneOutline></IoPaperPlaneOutline>
             </Link>
           )}
-          {typeof data.github !== 'string' && (
-            <Link
-              href={data.github[0]}
-              target="_blank"
-              className={styles.button}
-            >
-              <p>Github</p>
-              <IoPaperPlaneOutline></IoPaperPlaneOutline>
-            </Link>
-          )}
-          {typeof data.github !== 'string' && (
-            <Link
-              href={data.github[1]}
-              target="_blank"
-              className={styles.button}
-            >
-              <p>Github</p>
-              <IoPaperPlaneOutline></IoPaperPlaneOutline>
-            </Link>
-          )}
+          {Array.isArray(data.github) &&
+            data.github.map((repo, idx) => (
+              <Link
+                key={idx}
+                href={repo.url}
+                target="_blank"
+                className={styles.button}
+              >
+                <p>{repo.label}</p>
+                <IoPaperPlaneOutline></IoPaperPlaneOutline>
+              </Link>
+            ))}
         </div>
       </div>
       <div className={styles.content} id="tools">

@@ -46,8 +46,14 @@ let data = [
   {
     title: 'Pizzaria',
     github: [
-      'https://github.com/JasonTongg/pizzaria-website-back-end',
-      'https://github.com/JasonTongg/PizzaOrder-Website',
+      {
+        label: 'Backend',
+        url: 'https://github.com/JasonTongg/pizzaria-website-back-end',
+      },
+      {
+        label: 'Frontend',
+        url: 'https://github.com/JasonTongg/PizzaOrder-Website',
+      },
     ],
     image:
       'https://i.pinimg.com/originals/cc/f8/ee/ccf8eeb831c8efec22cfc516c2b6be52.png',
@@ -212,38 +218,85 @@ let data = [
 
 export default data;
 
-// Dummy data - Web3 portfolio
+// Web3 portfolio
 export let web3Portfolio = [
   {
-    title: 'NFT Marketplace',
-    demo: '#',
-    github: '#',
-    desc: 'A decentralized marketplace concept for minting, buying, and selling NFTs. Users can connect their wallet, mint ERC-721 tokens, list items for sale, and browse a gallery of collections. All listings and transfers are handled on-chain through smart contracts, with metadata pinned to IPFS for decentralized storage.',
-    tools: ['Solidity', 'Hardhat', 'ReactJS', 'Ethers.js', 'IPFS'],
+    title: 'Forge Solana Launchpad',
+    demo: 'https://forge-sol.vercel.app/',
+    github: 'https://github.com/JasonTongg/Forge_Solana_LaunchPad',
+    desc: "Forge is a token launchpad built on Solana that enables users to create and launch their own tokens through a simple and intuitive interface while leveraging Solana's high-performance infrastructure. Building Forge deepened my understanding of Solana program architecture and account management, SPL token creation and management, Program Derived Addresses (PDAs), token launch workflows and initialization logic, on-chain state management, and wallet integration for building scalable decentralized applications on Solana.",
+    tools: ['Solana', 'SPL Token', 'Anchor', 'Rust', 'Wallet Adapter'],
     background: '/Assets/temp-photo.png',
   },
   {
-    title: 'DeFi Staking Dashboard',
-    demo: '#',
-    github: '#',
-    desc: 'A dashboard concept for staking ERC-20 tokens and tracking rewards in real time. Users can deposit tokens into a staking pool, view APY, claim rewards, and unstake at any time. The dashboard reads on-chain data directly from the smart contract to display live balances and reward accrual.',
-    tools: ['Solidity', 'Web3.js', 'ReactJS', 'The Graph'],
+    title: 'Verdict Prediction Market',
+    demo: 'https://verdict-sol.vercel.app/',
+    github: 'https://github.com/JasonTongg/Prediction_Market',
+    desc: 'Verdict is a decentralized prediction market built on Solana that allows users to create and participate in markets, letting people speculate on the outcome of future events in a transparent and permissionless way. Building Verdict deepened my understanding of Solana program architecture and account management, Program Derived Addresses (PDAs), market creation and resolution logic, on-chain state management, and wallet integration for building decentralized applications on Solana.',
+    tools: ['Solana', 'Anchor', 'Rust', 'Wallet Adapter'],
     background: '/Assets/temp-photo.png',
   },
   {
-    title: 'DAO Voting App',
-    demo: '#',
-    github: '#',
-    desc: 'A governance concept that lets token holders create proposals and vote on them based on their token balance. Proposals move through discussion, voting, and execution stages, with results tallied on-chain to ensure transparency and tamper-proof outcomes.',
-    tools: ['Solidity', 'Hardhat', 'Ethers.js', 'ReactJS'],
+    title: 'Juryx Multi-Signature Wallet',
+    github: [
+      {label: 'Frontend', url: 'https://github.com/JasonTongg/Juryx_Frontend'},
+      {label: 'Contract', url: 'https://github.com/JasonTongg/Juryx'},
+    ],
+    desc: 'Juryx is a secure, decentralized multi-signature wallet platform built on ERC-4337 Account Abstraction. It demonstrates how smart contract wallets can eliminate single points of failure by requiring collective, M-of-N authorization for on-chain actions, going beyond the limitations of traditional Externally Owned Accounts (EOAs). The wallet functions as a smart account that validates UserOperations through a central EntryPoint, supports Paymaster-sponsored gasless transactions, and uses an AccountFactory with CREATE2 for deterministic wallet addresses across networks. Currently deployed on the Sepolia testnet with a responsive Next.js and Tailwind CSS dashboard for real-time monitoring of wallet health and pending signatures.',
+    tools: ['Solidity', 'Tailwind CSS', 'Next.js', 'Foundry'],
     background: '/Assets/temp-photo.png',
   },
   {
-    title: 'Token Launchpad',
-    demo: '#',
-    github: '#',
-    desc: 'A launchpad concept for deploying custom ERC-20 tokens without writing code. Users configure token name, symbol, and supply, then deploy directly from the UI. The platform also supports simple vesting schedules for team and investor allocations.',
-    tools: ['Solidity', 'Foundry', 'ReactJS', 'MetaMask'],
+    title: 'JUSD Stablecoin Protocol',
+    demo: 'https://jusd-stablecoin.vercel.app/',
+    github: [
+      {label: 'Frontend', url: 'https://github.com/JasonTongg/JUSD_Frontend'},
+      {label: 'Contract', url: 'https://github.com/JasonTongg/JUSD'},
+    ],
+    desc: 'JUSD is a decentralized, overcollateralized stablecoin protocol that demonstrates how transparent, on-chain stable assets can be built using smart contract logic and real-time price feeds. Users mint JUSD by locking collateral on-chain, with health factor, collateral ratio, and outstanding debt calculated and displayed live using on-chain data and decentralized price oracles. Minting, burning, collateral management, and risk calculations are executed entirely through verified smart contracts, keeping every position and system parameter publicly verifiable. Currently deployed and running on the Sepolia testnet for demonstration purposes.',
+    tools: ['Solidity', 'Foundry', 'Chainlink', 'ReactJS'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'JCollateral Lending Protocol',
+    demo: 'https://jcollateral.vercel.app/',
+    github: [
+      {
+        label: 'Frontend',
+        url: 'https://github.com/JasonTongg/JCollateral_Frontend',
+      },
+      {label: 'Contract', url: 'https://github.com/JasonTongg/JCollateral'},
+    ],
+    desc: 'JCollateral is a decentralized collateralized lending protocol that demonstrates the core mechanics behind on-chain borrowing, collateral management, and risk enforcement in DeFi systems. Users deposit assets as collateral and borrow against them, with positions managed securely through transparent smart contract logic covering debt accounting, liquidation risk, and price sensitivity, while keeping the experience clear and intuitive.',
+    tools: ['Solidity', 'Foundry', 'Chainlink', 'ReactJS'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'Zypher Decentralized Exchange',
+    demo: 'https://zypher-dex.vercel.app/',
+    github: [
+      {label: 'Frontend', url: 'https://github.com/JasonTongg/Zypher'},
+      {label: 'Contract', url: 'https://github.com/JasonTongg/Uniswap-V2'},
+    ],
+    desc: 'Zypher DEX is a next-generation DeFi interface that enables liquidity management, token swaps, and portfolio insights across Uniswap V2, V3, and V4 from a single seamless dashboard. The platform simplifies complex LP workflows using automated range-strategy helpers, smart routing, token conversions, and real-time on-chain analytics.',
+    tools: ['Solidity', 'Blockchain', 'Uniswap', 'ReactJS', 'Ethers.js'],
+    background: '/Assets/temp-photo.png',
+  },
+  {
+    title: 'CCIP Cross-Chain Yield Staking',
+    demo: 'https://ccip-crosschain.vercel.app/',
+    github: [
+      {
+        label: 'Frontend',
+        url: 'https://github.com/JasonTongg/CCIP-Crosschain-Frontend',
+      },
+      {
+        label: 'Contract',
+        url: 'https://github.com/JasonTongg/CCIP-RebaseToken-CrossChain',
+      },
+    ],
+    desc: "This project demonstrates a web interface for token bridging and yield staking using Chainlink's Cross-Chain Interoperability Protocol (CCIP). Beyond standard CCIP cross-chain transfers, it introduces a Rebase Token (RBT) system that rewards users with auto-compounding yield: depositing ETH or supported tokens mints RBT, a dynamic, rebasing token that grows automatically in the user's wallet over time, with balances and staking state synchronized across chains through CCIP's secure cross-chain messaging.",
+    tools: ['Solidity', 'EVM', 'Chainlink CCIP', 'ReactJS'],
     background: '/Assets/temp-photo.png',
   },
 ];

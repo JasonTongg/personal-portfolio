@@ -29,18 +29,18 @@ export default function Card({data}) {
             <BsArrowRightShort></BsArrowRightShort>
           </Link>
         )}
-        {typeof data.github !== 'string' && (
-          <Link href={data.github[0]} className={styles.button} target="_blank">
-            <p>GitHub</p>
-            <BsArrowRightShort></BsArrowRightShort>
-          </Link>
-        )}
-        {typeof data.github !== 'string' && (
-          <Link href={data.github[1]} className={styles.button} target="_blank">
-            <p>GitHub</p>
-            <BsArrowRightShort></BsArrowRightShort>
-          </Link>
-        )}
+        {Array.isArray(data.github) &&
+          data.github.map((repo, idx) => (
+            <Link
+              key={idx}
+              href={repo.url}
+              className={styles.button}
+              target="_blank"
+            >
+              <p>{repo.label}</p>
+              <BsArrowRightShort></BsArrowRightShort>
+            </Link>
+          ))}
 
         <Link
           className={styles.button}

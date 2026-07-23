@@ -32,6 +32,12 @@ export default function Certification({data}) {
         </button>
         <button
           onClick={filterCategory}
+          className={category === 'Web3' && styles.active}
+        >
+          Web3
+        </button>
+        <button
+          onClick={filterCategory}
           className={category === 'Basic Web' && styles.active}
         >
           Basic Web

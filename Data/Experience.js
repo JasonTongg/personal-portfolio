@@ -2,7 +2,7 @@ export let education = [
   {
     degree: 'Computer Science and Mathematics',
     location: 'Binus University',
-    date: '2019 - Present',
+    date: '2019 - 2024',
   },
   {
     degree: 'Front-end Developer',
