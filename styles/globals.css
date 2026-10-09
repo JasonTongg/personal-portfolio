@@ -20,6 +20,34 @@ a {
   text-decoration: none;
 }
 
+/* Idle drift for decorative clouds. Sway and bob animate separate properties
+   with different periods, so each cloud wanders instead of tracing one line.
+   Tune per cloud with --sway, --bob, --sway-time, --bob-time and --drift-delay. */
+.cloud-drift {
+  animation: cloud-sway var(--sway-time, 14s) ease-in-out
+      var(--drift-delay, 0s) infinite alternate,
+    cloud-bob var(--bob-time, 6s) ease-in-out var(--drift-delay, 0s) infinite
+      alternate;
+}
+
+@keyframes cloud-sway {
+  to {
+    translate: var(--sway, 12px) 0;
+  }
+}
+
+@keyframes cloud-bob {
+  to {
+    transform: translateY(var(--bob, -4px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-drift {
+    animation: none;
+  }
+}
+
 :root {
   --background-white: #ebebeb;
   --white: white;

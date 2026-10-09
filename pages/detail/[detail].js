@@ -3,12 +3,10 @@ import Navbar from '@/components/Detail-Navbar/Navbar';
 import styles from '../../styles/Home.module.css';
 import FixedNavbar from '@/components/Detail-FixedNavbar/FixedNavbar';
 import Footer from '@/components/Footer/Footer';
+import Rocket from '@/components/Rocket/Rocket';
 import Head from 'next/head';
-import Image from 'next/image';
-import Rocket from '../../public/Assets/rocket.png';
 import Details from '@/components/Detail/Detail';
 import portfolioData, {web3Portfolio} from '../../Data/Portfolio';
-import RocketCloud from '../../public/Assets/cloud-5.png';
 
 let allPortfolioData = [...portfolioData, ...web3Portfolio];
 
@@ -44,24 +42,12 @@ export default function Detail({data}) {
     let footer = document.querySelector('#footerContainer');
     let footerY = footer?.getBoundingClientRect().y;
     let windowHeight = window.innerHeight;
-    let rocket = document.querySelector('#rocket');
-    let scroll = window.scrollY;
-    let cloud = document.querySelector('#cloud');
 
     if (height * -1 >= y && footerY >= windowHeight - 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
-
-    let speed =
-      (scroll /
-        (document.body?.getBoundingClientRect().height - window.innerHeight)) *
-      100;
-    rocket.style.top = `calc(${speed}% - ${
-      rocket.getBoundingClientRect().height
-    }px)`;
-    cloud.style.opacity = `${(speed / 100) * 2}`;
   }, []);
 
   useEffect(() => {
@@ -78,25 +64,14 @@ export default function Detail({data}) {
       <Details data={data} />
       <Footer />
       {navbar && <FixedNavbar />}
-      <div className={styles.background}></div>
-      <div className={styles.rocket}>
-        <Image
-          src={Rocket}
-          alt="rocket"
-          width={100}
-          height={50}
-          className={styles.rocketImage}
-          id="rocket"
-        ></Image>
-        <Image
-          src={RocketCloud}
-          alt="Cloud"
-          width={100}
-          height={80}
-          className={styles.cloud}
-          id="cloud"
-        ></Image>
+      <div className={styles.background}>
+        <div className={styles.sky}>
+          <div className={`${styles.skyCloud} cloud-drift`}></div>
+          <div className={`${styles.skyCloud} cloud-drift`}></div>
+          <div className={`${styles.skyCloud} cloud-drift`}></div>
+        </div>
       </div>
+      <Rocket />
     </div>
   );
 }

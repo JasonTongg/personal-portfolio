@@ -23,6 +23,11 @@
   /* left: 60%; */
   right: -10%;
   width: 521px;
+  --sway: -16px;
+  --bob: -5px;
+  --sway-time: 13s;
+  --bob-time: 7s;
+  --drift-delay: -2s;
 }
 
 .cloud2 {
@@ -31,6 +36,11 @@
   left: -11%;
   width: 447px;
   z-index: 0;
+  --sway: 18px;
+  --bob: -4px;
+  --sway-time: 15s;
+  --bob-time: 6s;
+  --drift-delay: -6s;
 }
 
 .cloud3 {
@@ -38,6 +48,11 @@
   /* right: 90%; */
   left: -13%;
   width: 232px;
+  --sway: 10px;
+  --bob: -3px;
+  --sway-time: 11s;
+  --bob-time: 5s;
+  --drift-delay: -4s;
 }
 
 .cloud4 {
@@ -45,6 +60,11 @@
   /* left: 90%; */
   right: -13%;
   width: 200px;
+  --sway: -12px;
+  --bob: -3px;
+  --sway-time: 12s;
+  --bob-time: 5.5s;
+  --drift-delay: -8s;
 }
 
 .sosmed {

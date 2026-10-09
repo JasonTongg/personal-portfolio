@@ -1,0 +1,29 @@
+.rocket {
+  height: auto;
+  width: 75px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%) rotate(180deg);
+}
+
+.cloud {
+  height: auto;
+  width: 75px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  /* drift left only, it sits against the screen edge */
+  --sway: -8px;
+  --bob: -3px;
+  --sway-time: 10s;
+  --bob-time: 5s;
+}
+
+@media only screen and (max-width: 500px) {
+  .rocket,
+  .cloud {
+    display: none;
+  }
+}

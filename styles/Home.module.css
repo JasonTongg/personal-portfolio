@@ -10,44 +10,64 @@
 }
 
 .background {
-  background-image: url('../public/Assets/cloud.png');
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   position: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
   box-sizing: border-box;
   z-index: 0;
 }
 
-.rocketImage {
-  height: auto;
-  width: 75px;
-  position: fixed;
-  right: 0;
-  transform: rotateX(180deg);
+/* Same area `background-size: cover` gave cloud.png (1090x657), so the clouds
+   keep their places at any viewport size */
+.sky {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100vw, 100vh * 1090 / 657);
+  aspect-ratio: 1090 / 657;
+  transform: translate(-50%, -50%);
 }
 
-.cloud {
-  height: auto;
-  width: 75px;
-  position: fixed;
-  right: 0;
-  top: 50%;
+/* cloud.png has three clouds baked in; each layer clips out one of them so
+   they drift independently */
+.skyCloud {
+  position: absolute;
+  inset: 0;
+  background: url('../public/Assets/cloud.png') no-repeat 0 0 / 100% 100%;
+}
+
+.skyCloud:nth-child(1) {
+  clip-path: inset(15% 80% 76% 9.5%);
+  --sway: 12px;
+  --bob: -3px;
+  --sway-time: 16s;
+  --bob-time: 6.5s;
+  --drift-delay: -5s;
+}
+
+.skyCloud:nth-child(2) {
+  clip-path: inset(36% 13% 56.5% 74.5%);
+  --sway: -10px;
+  --bob: -4px;
+  --sway-time: 14s;
+  --bob-time: 7.5s;
+  --drift-delay: -9s;
+}
+
+.skyCloud:nth-child(3) {
+  clip-path: inset(79% 61% 14% 29.5%);
+  --sway: 9px;
+  --bob: -3px;
+  --sway-time: 12s;
+  --bob-time: 5.5s;
+  --drift-delay: -2s;
 }
 
 @media only screen and (max-width: 900px) {
   .background {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .rocketImage,
-  .cloud {
     display: none;
   }
 }

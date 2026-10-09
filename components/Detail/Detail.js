@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import styles from './Detail.module.css';
 import Link from 'next/link';
 import {SiHtml5, SiReact, SiAuth0, SiRedux} from 'react-icons/si';
@@ -18,9 +18,84 @@ import Javascript from '../../public/Assets/Javascript.png';
 import Vuejs from '../../public/Assets/vuejs.png';
 import Nuxtjs from '../../public/Assets/nuxtjs.png';
 import Parcel from '../../public/Assets/parcel.svg';
+import Solana from '../../public/Assets/solana.png';
+import Anchor from '../../public/Assets/anchor.png';
+import Rust from '../../public/Assets/rust.png';
+import Solidity from '../../public/Assets/solidity.png';
+import Tailwind from '../../public/Assets/tailwind.png';
+import Nextjs from '../../public/Assets/nextjs.png';
+import Foundry from '../../public/Assets/foundry.png';
+import RainbowKit from '../../public/Assets/rainbowKit.png';
+import Uniswap from '../../public/Assets/uniswap.png';
+import Chainlink from '../../public/Assets/chainlink.png';
 import Image from 'next/image';
 
+// Web3 tool logos, keyed by lowercase tool name; sizes keep each logo's aspect ratio
+const web3Logos = {
+  solana: {src: Solana, width: 53, height: 53},
+  anchor: {src: Anchor, width: 53, height: 53},
+  rust: {src: Rust, width: 53, height: 53},
+  solidity: {src: Solidity, width: 34, height: 53},
+  'tailwind css': {src: Tailwind, width: 62, height: 37},
+  'next.js': {src: Nextjs, width: 66, height: 40},
+  foundry: {src: Foundry, width: 53, height: 53},
+  rainbowkit: {src: RainbowKit, width: 53, height: 53},
+  uniswap: {src: Uniswap, width: 49, height: 53},
+  chainlink: {src: Chainlink, width: 53, height: 53},
+};
+
 export default function Detail({data}) {
+  let previewRef = useRef(null);
+  let browserRef = useRef(null);
+
+  // Scroll-driven reveal: the preview starts tilted back and slightly smaller,
+  // then stands up to full size as it scrolls into view. It ends with no
+  // transform at all so the screenshot renders at its native sharpness.
+  useEffect(() => {
+    let preview = previewRef.current;
+    let browser = browserRef.current;
+    if (!preview || !browser) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let frame = null;
+    let updatePreview = () => {
+      frame = null;
+      let windowHeight = window.innerHeight;
+      let top = preview.getBoundingClientRect().top + window.scrollY;
+      let start = top - windowHeight;
+      let end = Math.min(
+        top - windowHeight * 0.2,
+        document.documentElement.scrollHeight - windowHeight
+      );
+      let progress = (window.scrollY - start) / Math.max(end - start, 1);
+      progress = Math.min(Math.max(progress, 0), 1);
+      let eased = 1 - Math.pow(1 - progress, 2);
+
+      if (eased >= 0.999) {
+        browser.style.transform = 'none';
+        browser.style.opacity = '1';
+        return;
+      }
+      browser.style.transform = `perspective(1200px) rotateX(${
+        (1 - eased) * 25
+      }deg) scale(${0.85 + eased * 0.15})`;
+      browser.style.opacity = `${0.4 + eased * 0.6}`;
+    };
+
+    let requestUpdate = () => {
+      if (frame === null) frame = window.requestAnimationFrame(updatePreview);
+    };
+
+    updatePreview();
+    window.addEventListener('scroll', requestUpdate);
+    window.addEventListener('resize', requestUpdate);
+    return () => {
+      window.removeEventListener('scroll', requestUpdate);
+      window.removeEventListener('resize', requestUpdate);
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
+  }, [data.background]);
+
   return (
     <div className={styles.container}>
       <div className={styles.hero} id="hero">
@@ -158,6 +233,14 @@ export default function Detail({data}) {
                     item.toLowerCase() === 'redux persist') && (
                     <SiRedux style={{color: '#835EC3'}}></SiRedux>
                   )}
+                  {web3Logos[item.toLowerCase()] && (
+                    <Image
+                      src={web3Logos[item.toLowerCase()].src}
+                      alt={item}
+                      width={web3Logos[item.toLowerCase()].width}
+                      height={web3Logos[item.toLowerCase()].height}
+                    />
+                  )}
                 </div>
                 <p>{item}</p>
               </div>
@@ -191,10 +274,28 @@ export default function Detail({data}) {
         </div>
       </div>
       {data.background && (
-        <div
-          className={styles.parallax}
-          style={{backgroundImage: `url(${data.background})`}}
-        ></div>
+        <div className={styles.preview} ref={previewRef}>
+          <div className={styles.browser} ref={browserRef}>
+            <div className={styles.browserBar}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <p>
+                {data.demo
+                  ? data.demo.replace(/^https?:\/\//, '').replace(/\/$/, '')
+                  : data.title}
+              </p>
+            </div>
+            <Image
+              src={data.background}
+              alt={`${data.title} preview`}
+              width={1190}
+              height={560}
+              sizes="1036px"
+              quality={100}
+            />
+          </div>
+        </div>
       )}
     </div>
   );

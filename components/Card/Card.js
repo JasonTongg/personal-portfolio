@@ -13,6 +13,7 @@ export default function Card({data}) {
         alt="Portfolio photo"
         width={200}
         height={200}
+        sizes="(max-width: 750px) 90vw, 400px"
         quality={100}
       ></Image>
       <h3>{data.title}</h3>

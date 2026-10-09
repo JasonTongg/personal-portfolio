@@ -49,6 +49,25 @@ export let frontEndSkills = [
   },
 ];
 
+export let backEndSkills = [
+  {
+    skill: 'Gin',
+    level: 'Intermediate',
+  },
+  {
+    skill: 'Go Language',
+    level: 'Intermediate',
+  },
+  {
+    skill: 'MySQL',
+    level: 'Intermediate',
+  },
+  {
+    skill: 'PostgreSQL',
+    level: 'Intermediate',
+  },
+];
+
 export let otherSkill = [
   {
     skill: 'OOP',
@@ -65,22 +84,6 @@ export let otherSkill = [
   {
     skill: 'Java',
     level: 'Intermediate',
-  },
-  {
-    skill: 'ExpressJS',
-    level: 'Basic',
-  },
-  {
-    skill: 'NodeJS',
-    level: 'Basic',
-  },
-  {
-    skill: 'PHP',
-    level: 'Basic',
-  },
-  {
-    skill: 'MySQL',
-    level: 'Basic',
   },
 ];
 

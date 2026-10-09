@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Hero.module.css';
 import Image from 'next/image';
 import Wave from '../../public/Assets/wave.png';
-import {BsInstagram} from 'react-icons/bs';
-import {RiLinkedinFill} from 'react-icons/ri';
-import {FiGithub} from 'react-icons/fi';
-import {IoPaperPlaneOutline} from 'react-icons/io5';
+import { BsInstagram } from 'react-icons/bs';
+import { RiLinkedinFill } from 'react-icons/ri';
+import { FiGithub } from 'react-icons/fi';
+import { IoPaperPlaneOutline } from 'react-icons/io5';
 import Link from 'next/link';
-import {TypeAnimation} from 'react-type-animation';
+import { TypeAnimation } from 'react-type-animation';
 import cloud1 from '../../public/Assets/cloud-1.png';
 import cloud2 from '../../public/Assets/cloud-2.png';
 import cloud3 from '../../public/Assets/cloud-3.png';
@@ -47,7 +47,7 @@ export default function Hero() {
       <Image
         src={cloud1}
         alt="cloud"
-        className={styles.cloud1}
+        className={`${styles.cloud1} cloud-drift`}
         height={100}
         width={500}
         id="cloud1"
@@ -55,7 +55,7 @@ export default function Hero() {
       <Image
         src={cloud2}
         alt="cloud"
-        className={styles.cloud2}
+        className={`${styles.cloud2} cloud-drift`}
         height={100}
         width={500}
         id="cloud2"
@@ -63,7 +63,7 @@ export default function Hero() {
       <Image
         src={cloud3}
         alt="cloud"
-        className={styles.cloud3}
+        className={`${styles.cloud3} cloud-drift`}
         height={100}
         width={500}
         id="cloud3"
@@ -71,7 +71,7 @@ export default function Hero() {
       <Image
         src={cloud4}
         alt="cloud"
-        className={styles.cloud4}
+        className={`${styles.cloud4} cloud-drift`}
         height={100}
         width={500}
         id="cloud4"
@@ -104,9 +104,7 @@ export default function Hero() {
                 1000,
                 'Smart Contract Engineer',
                 1000,
-                'Front-end Developer',
-                1000,
-                'Web Developer',
+                'Full-stack Web Developer',
                 1000,
                 'Tech Enthusiast',
                 1000,

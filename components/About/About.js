@@ -6,16 +6,8 @@ import {RiMedalLine} from 'react-icons/ri';
 import {FiDownloadCloud} from 'react-icons/fi';
 import {GiSpellBook} from 'react-icons/gi';
 import {AiOutlineFileDone} from 'react-icons/ai';
-import {saveAs} from 'file-saver';
 
 export default function About() {
-  const saveFile = () => {
-    saveAs(
-      'https://drive.google.com/file/d/13Mzccb16fMMZGxVBrw9noMUDSGg59W99/view?usp=sharing',
-      'example.pdf'
-    );
-  };
-
   return (
     <div className={styles.container} id="about">
       <div className={styles.header}>
@@ -59,7 +51,11 @@ export default function About() {
             several bootcamp for self improvement, such as: PBA Labs, Binar
             Academy, Timedoor Academy and many more...
           </p>
-          <a onClick={saveFile} className={styles.button}>
+          <a
+            href="/Jason_Resume.pdf"
+            download="Jason_Resume.pdf"
+            className={styles.button}
+          >
             <p>Download CV</p>
             <FiDownloadCloud></FiDownloadCloud>
           </a>

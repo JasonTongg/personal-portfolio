@@ -119,6 +119,13 @@ let data = [
     type: ['Basic Web'],
   },
   {
+    company: 'Udemy',
+    title: 'Database MySQL',
+    image: '',
+    credentials: 'https://www.udemy.com/certificate/UC-7db2765c-cd45-4ec1-b2b7-a17d8d8f655a/',
+    type: ['Basic Web'],
+  },
+  {
     company: 'Sololearn',
     title: 'React and Redux',
     image: '',
