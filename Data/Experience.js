@@ -116,6 +116,11 @@ export let web3Education = [
 
 export let web3Exp = [
   {
+    degree: 'Full-stack Developer',
+    location: 'Velvett',
+    date: 'Jan 2026 - Present',
+  },
+  {
     degree: 'Blockchain Developer',
     location: 'HeLa Labs',
     date: 'May 2025 - Present',
